@@ -1,13 +1,110 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+body, html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #F04F3D;
+  color: #FFD9CF; /* Very light peach */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center Intro */
+.intro-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-name {
+  font-size: 150px;
+  color: #FFD75E;
+  font-weight: 900;
+  text-transform: uppercase;
+  animation: slideLeft 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFD75E;
+  text-decoration: none;
+}
+
+.logo .and {
+  font-style: italic;
+  color: #ffffff;
+}
+
+/* Nav */
+.nav-links a {
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: #ffd9cf;
+}
+
+/* Hero Text */
+.hero {
+  text-align: left;
+  padding: 60px 40px;
+}
+
+.hero h1 {
+  font-size: 100px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 80px;
+  font-weight: 700;
+  color: white;
+}
+
+.hero p {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.typed::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
