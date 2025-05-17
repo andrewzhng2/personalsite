@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { BalldontlieAPI } from "@balldontlie/sdk";
+import teamIdMap from './team_id_mapping.json';
 
 const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" });
 
@@ -115,7 +116,7 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p>I've always wanted my own personal hub for the things I cared about! So please explore around to see, everything has a reason and an intention. This website was fully built by my team. (AI + Me lol)
+          <p>I've always wanted my own personal hub for the things I cared about! So please explore around to see, everything has a reason and an intention. This website was fully built by my team. (team = AI + me)
           </p>
         </section>
 
@@ -135,7 +136,7 @@ export default function HomePage() {
                           className={`team-row ${game.winner === (idx === 1 ? "home" : "away") ? "winner" : "loser"}`}
                         >
                           <img
-                            src={`https://cdn.nba.com/logos/nba/${team.id}/global/L/logo.svg`}
+                            src={`https://cdn.nba.com/logos/nba/${teamIdMap[team.id]}/global/L/logo.svg`}
                             alt={team.short}
                             className="team-logo"
                             onError={(e) => (e.target.style.display = "none")}

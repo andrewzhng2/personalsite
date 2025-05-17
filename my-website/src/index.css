@@ -78,7 +78,7 @@ body, html {
 /* ---------------- Hero Text ---------------- */
 .hero {
   text-align: left;
-  padding: 60px 40px;
+  padding: 20px 40px;
 }
 
 .hero h1 {
@@ -161,17 +161,20 @@ body, html {
   transform: translateY(-4px);
 }
 .team-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
   margin-bottom: 8px;
 }
 
 .team-logo {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
-  margin-right: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .team-name {
@@ -179,11 +182,13 @@ body, html {
   font-weight: 600;
   text-transform: uppercase;
   color: #333;
+  font-size: 22px;
 }
 
 .team-score {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
+  margin-right: 10px;
 }
 
 .winner .team-name,
@@ -194,11 +199,6 @@ body, html {
 
 .loser {
   opacity: 0.4;
-}
-
-.live-content li {
-  font-size: 18px;
-  margin-bottom: 12px;
 }
 
 .placeholder {
