@@ -14,7 +14,7 @@ body, html {
   flex-direction: column;
 }
 
-/* Center Intro */
+/* ---------------- Intro ---------------- */
 .intro-center {
   flex: 1;
   display: flex;
@@ -40,7 +40,7 @@ body, html {
   }
 }
 
-/* Header */
+/* ---------------- Header ---------------- */
 .header {
   display: flex;
   justify-content: space-between;
@@ -75,7 +75,7 @@ body, html {
   color: #ffd9cf;
 }
 
-/* Hero Text */
+/* ---------------- Hero Text ---------------- */
 .hero {
   text-align: left;
   padding: 60px 40px;
@@ -107,4 +107,100 @@ body, html {
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
+}
+
+/* ---------------- Live Sections Text ---------------- */
+.live-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 40px;
+  margin-top: 20px;
+}
+
+.live-box {
+  background-color: #FFD75E;
+  color: #333;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.live-box h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.live-box p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-content: center;
+  gap: 24px;
+  margin-top: 10px;
+  padding: 16px;
+}
+
+.score-box {
+  width: 200px;
+  background-color: #fff4c1;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.score-box:hover {
+  transform: translateY(-4px);
+}
+.team-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.team-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+
+.team-name {
+  flex: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.team-score {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.winner .team-name,
+.winner .team-score {
+  font-weight: 900;
+  color: #111;
+}
+
+.loser {
+  opacity: 0.4;
+}
+
+.live-content li {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.placeholder {
+  opacity: 0.6;
 }
