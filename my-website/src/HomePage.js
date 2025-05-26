@@ -15,8 +15,6 @@ const titles = [
   "an actor."
 ];
 
-
-
 export default function HomePage() {
   const [index, setIndex] = useState(0);
   const [typed, setTyped] = useState("");
@@ -24,12 +22,13 @@ export default function HomePage() {
   const [showIntro, setShowIntro] = useState(true);
   const [scores, setScores] = useState([]);
 
-  // Hide intro (and show header) after 2.5 seconds
+  // HIDE INTRO
   useEffect(() => {
     const introTimer = setTimeout(() => setShowIntro(false), 2500);
     return () => clearTimeout(introTimer);
   }, []);
 
+  // TYPING EFFECT
   useEffect(() => {
     const current = titles[index % titles.length];
     const typingSpeed = isDeleting ? 30 : 80;
@@ -51,6 +50,33 @@ export default function HomePage() {
     return () => clearTimeout(timer);
   }, [typed, isDeleting, index]);
 
+  // UPDATE CLOCK
+  const [time, setTime] = useState("");
+  useEffect(() => {
+    const updateClock = () => {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12;
+
+      const day = now.toLocaleDateString("en-US", { weekday: "long" });
+      const dateStr = now.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric"
+      });
+
+      setTime(`${day},    ${dateStr}   ${hours}:${minutes}:${seconds} ${ampm}`);
+    };
+
+    updateClock(); // initial call
+    const interval = setInterval(updateClock, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // FETCH NBA SCORES
   useEffect(() => {
   const fetchLiveScores = async () => {
     try {
@@ -91,7 +117,25 @@ export default function HomePage() {
   };
 
   fetchLiveScores();
-}, []);
+  }, []);
+
+  // FETCH BROADWAY SHOWS
+  const [shows, setShows] = useState([]);
+
+  useEffect(() => {
+    const fetchBroadway = async () => {
+      try {
+        const res = await fetch("https://broadway-grosses-api.vercel.app/api/latest");
+        const data = await res.json();
+        setShows(data.slice(0, 10));
+      } catch (err) {
+        console.error("Failed to fetch Broadway shows:", err);
+      }
+    };
+
+    fetchBroadway();
+  }, []);
+
 
   return (
     <div className="main-container">
@@ -116,21 +160,25 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p>I've always wanted my own personal hub for the things I cared about! So please explore around to see, everything has a reason and an intention. This website was fully built by my team. (team = AI + me)
+          <p>Finally, a self-built personal hub for the things I cared about! Please explore around to see, everything has a reason and an intention. This website was fully built by my team. (team = AI + me)
           </p>
         </section>
 
-        <section className="live-section">
-          <div className="live-box">
-            <h3>Yesterday's NBA Scores:</h3>
-            <div className="live-content">
+        <div className="clock">
+          <strong>Today's Date and Time (PST):</strong> {time}
+        </div>
+
+        <section className="live-dashboard">
+            <div className="dashboard-column">
+              <h3>Yesterday's NBA Scores:</h3>
               {scores.length === 0 ? (
-                <p>Loading yesterday's scores...</p>
+                <p>No NBA Games :(</p>
               ) : (
-                <div className="score-grid">
-                  {scores.map((game, i) => (
-                    <div className="score-box" key={i}>
-                      {[game.away, game.home].map((team, idx) => (
+                scores.slice(0, 10).map((game, i) => (
+                  <div className="column-item" key={i}>
+                    {[game.away, game.home].map((team, idx) => {
+                      if (!team) return null; // <-- prevents potential crash
+                      return (
                         <div
                           key={idx}
                           className={`team-row ${game.winner === (idx === 1 ? "home" : "away") ? "winner" : "loser"}`}
@@ -144,23 +192,32 @@ export default function HomePage() {
                           <span className="team-name">{team.short}</span>
                           <span className="team-score">{team.score}</span>
                         </div>
-                      ))}
-                    </div>
-                  ))}
-                </div>
+                      );
+                    })}
+                  </div>
+                ))
               )}
-            </div>
           </div>
 
-          <div className="live-box placeholder">
+          <div className="dashboard-column">
             <h3>Current Top 10 Broadway Shows</h3>
-            <div className="live-content">
-              <p>Coming Soon...</p>
-            </div>
+            {shows.length === 0 ? (
+              <p className="no-data-msg">No Broadway data</p>
+            ) : (
+              shows.map((show, i) => (
+                <div className="column-item" key={i}>
+                  <strong>#{show.rank}</strong><br />
+                  {show.show}<br />
+                  <span style={{ fontSize: '12px', color: '#777' }}>
+                    {show.theater} – {show.capacity}
+                  </span>
+                </div>
+              ))
+            )}
           </div>
 
-          <div className="live-box placeholder">
-            <h3>This Week's Weather in Toronto...</h3>
+          <div className="dashboard-column">
+            <h3>This Week's Weather... Around the World!</h3>
             <div className="live-content">
               <p>Coming Soon...</p>
             </div>
