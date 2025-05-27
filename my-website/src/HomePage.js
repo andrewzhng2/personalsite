@@ -125,11 +125,30 @@ export default function HomePage() {
   useEffect(() => {
     const fetchBroadway = async () => {
       try {
-        const res = await fetch("https://broadway-grosses-api.vercel.app/api/latest");
+        const res = await fetch("https://broadwayworldapi.onrender.com/broadway");
         const data = await res.json();
-        setShows(data.slice(0, 10));
+
+        console.log("✅ Raw Broadway data:", data);
+
+        const cleaned = data.map((item) => {
+          const [avgPrice, topPrice] = item.avg_ticket.split("$").filter(Boolean);
+          const [showName, theater] = item.show.split("\n");
+
+          return {
+            rank: item.rank,
+            show: showName?.trim(),
+            theater: theater?.trim(),
+            gross: item.gross,
+            capacity: item.capacity,
+            avgTicket: `$${avgPrice}`,
+            topTicket: `$${topPrice}`,
+          };
+        });
+
+        console.log("✅ Cleaned Broadway data:", cleaned);
+        setShows(cleaned);
       } catch (err) {
-        console.error("Failed to fetch Broadway shows:", err);
+        console.error("Error fetching Broadway shows:", err);
       }
     };
 
@@ -202,15 +221,18 @@ export default function HomePage() {
           <div className="dashboard-column">
             <h3>Current Top 10 Broadway Shows</h3>
             {shows.length === 0 ? (
-              <p className="no-data-msg">No Broadway data</p>
+              <p className="no-data-msg">Broadway data not loading</p>
             ) : (
-              shows.map((show, i) => (
-                <div className="column-item" key={i}>
-                  <strong>#{show.rank}</strong><br />
-                  {show.show}<br />
-                  <span style={{ fontSize: '12px', color: '#777' }}>
-                    {show.theater} – {show.capacity}
-                  </span>
+              shows.map((show, index) => (
+                <div key={index} className="column-item">
+                  <div className="team-row">
+                    <span className="team-name font-bold">
+                      {show.rank}. {show.show}
+                    </span>
+                  </div>
+                  <div className="team-row">
+                    <span className="team-score text-sm text-gray-600">{show.theater}</span>
+                  </div>
                 </div>
               ))
             )}
