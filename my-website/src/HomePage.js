@@ -7,12 +7,26 @@ import teamIdMap from './team_id_mapping.json';
 const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" });
 
 const titles = [
-  "a technical consultant.",
+  "a sales engineer.",
   "a content creator.",
   "a chef.",
   "a soccer player, climber, baller.",
+  "a technical consultant.",
   "an events coordinator.",
   "an actor."
+];
+
+export const rankedCities = [
+  "Dubai",
+  "Vienna",
+  "Sydney",
+  "Seoul",
+  "New Orleans",
+  "Mykonos",
+  "Venice",
+  "Los Angeles",
+  "Madrid",
+  "Rio de Janeiro",
 ];
 
 export default function HomePage() {
@@ -21,6 +35,7 @@ export default function HomePage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const [scores, setScores] = useState([]);
+  const [weather, setWeather] = useState([]);
 
   // HIDE INTRO
   useEffect(() => {
@@ -128,8 +143,6 @@ export default function HomePage() {
         const res = await fetch("https://broadwayworldapi.onrender.com/broadway");
         const data = await res.json();
 
-        console.log("✅ Raw Broadway data:", data);
-
         const cleaned = data.map((item) => {
           const [avgPrice, topPrice] = item.avg_ticket.split("$").filter(Boolean);
           const [showName, theater] = item.show.split("\n");
@@ -145,7 +158,6 @@ export default function HomePage() {
           };
         });
 
-        console.log("✅ Cleaned Broadway data:", cleaned);
         setShows(cleaned);
       } catch (err) {
         console.error("Error fetching Broadway shows:", err);
@@ -153,6 +165,35 @@ export default function HomePage() {
     };
 
     fetchBroadway();
+  }, []);
+
+  // FETCH WEATHER
+  useEffect(() => {
+    const API_KEY = "02cd484c5619492fa0303704252805"; // Replace with your actual key
+
+    const fetchWeather = async () => {
+      try {
+        const responses = await Promise.all(
+          rankedCities.map(city =>
+            fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${encodeURIComponent(city)}`)
+              .then(res => res.json())
+          )
+        );
+
+        const formatted = responses.map((data, index) => ({
+          city: rankedCities[index],
+          temp: Math.round(data.current.temp_c),
+          icon: data.current.condition.icon,
+          desc: data.current.condition.text,
+        }));
+
+        setWeather(formatted);
+      } catch (err) {
+        console.error("Failed to fetch weather:", err);
+      }
+    };
+
+    fetchWeather();
   }, []);
 
 
@@ -179,7 +220,7 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p>Finally, a self-built personal hub for the things I cared about! Please explore around to see, everything has a reason and an intention. This website was fully built by my team. (team = AI + me)
+          <p>Finally, a self-built personal hub for the things I cared about. Please explore around to see because everything has a reason! This website was fully built by my team. (team = AI + me)
           </p>
         </section>
 
@@ -188,7 +229,7 @@ export default function HomePage() {
         </div>
 
         <section className="live-dashboard">
-            <div className="dashboard-column">
+            <div className="dashboard-column basketball-theme">
               <h3>Yesterday's NBA Scores:</h3>
               {scores.length === 0 ? (
                 <p>No NBA Games :(</p>
@@ -218,31 +259,45 @@ export default function HomePage() {
               )}
           </div>
 
-          <div className="dashboard-column">
+          <div className="dashboard-column broadway-theme">
             <h3>Current Top 10 Broadway Shows</h3>
             {shows.length === 0 ? (
-              <p className="no-data-msg">Broadway data not loading</p>
+              <p className="no-data-msg">Render application needs 50 seconds to load, so please literally give it a minute!</p>
             ) : (
               shows.map((show, index) => (
                 <div key={index} className="column-item">
                   <div className="team-row">
-                    <span className="team-name font-bold">
+                    <span className="prod-name">
                       {show.rank}. {show.show}
                     </span>
                   </div>
                   <div className="team-row">
-                    <span className="team-score text-sm text-gray-600">{show.theater}</span>
+                    <span className="theater">{show.theater}</span>
                   </div>
                 </div>
               ))
             )}
           </div>
 
-          <div className="dashboard-column">
-            <h3>This Week's Weather... Around the World!</h3>
-            <div className="live-content">
-              <p>Coming Soon...</p>
-            </div>
+          <div className="dashboard-column weather-theme">
+            <h3>Today's Weather... in My Top 10 Travel Destinations!</h3>
+            {weather.length === 0 ? (
+              <p className="no-data-msg">Fetching weather...</p>
+            ) : (
+              weather.map((city, index) => (
+                <div key={index} className="column-item">
+                  <div className="team-row">
+                    <img
+                      src={city.icon}
+                      alt={city.desc}
+                      className="team-logo"
+                    />
+                    <span className="city-name">{index + 1}. {city.city}</span>
+                    <span className="temperature">{city.temp}°C</span>
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         </section>
         </>
