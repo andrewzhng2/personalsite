@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 //import { useEffect, useState } from 'react';
 import './App.css'; // or use a dedicated layout.css
 
@@ -11,12 +11,32 @@ export default function Layout() {
     <div>
       {!isHome && (
         <header className="header">
-          <Link to="/" className="logo">AZ</Link>
+          <Link to="/" className="alt-logo">AZ</Link>
           <nav className="nav-links">
-            <Link to="/work" className="nav-link">Work</Link>
-            <Link to="/experiences" className="nav-link">Experiences</Link>
-            <Link to="/events" className="nav-link">Events</Link>
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <NavLink
+              to="/work"
+              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            >
+              Work
+            </NavLink>
+            <NavLink
+              to="/experiences"
+              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            >
+              Experiences
+            </NavLink>
+            <NavLink
+              to="/events"
+              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            >
+              Events
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            >
+              Contact
+            </NavLink>
           </nav>
         </header>
       )}

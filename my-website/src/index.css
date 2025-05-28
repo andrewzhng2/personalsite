@@ -55,6 +55,13 @@ body, html {
   text-decoration: none;
 }
 
+.alt-logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 .logo .and {
   font-style: italic;
   color: #ffffff;
@@ -73,6 +80,10 @@ body, html {
 
 .nav-links a:hover {
   color: #ffd9cf;
+}
+
+.nav-links a.active {
+  color: #FFD75E; /* Bright yellow */
 }
 
 /* ---------------- Hero Text ---------------- */
