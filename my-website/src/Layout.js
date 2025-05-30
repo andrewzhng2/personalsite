@@ -20,16 +20,28 @@ export default function Layout() {
               Work
             </NavLink>
             <NavLink
-              to="/experiences"
-              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
-            >
-              Experiences
-            </NavLink>
-            <NavLink
               to="/events"
               className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
             >
               Events
+            </NavLink>
+            <NavLink
+              to="/acting"
+              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            >
+              Acting
+            </NavLink>
+            <NavLink
+              to="/sports"
+              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            >
+              Sports
+            </NavLink>
+            <NavLink
+              to="/travel"
+              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
+            >
+              Travel
             </NavLink>
             <NavLink
               to="/contact"

@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import HomePage from './HomePage';
 import WorkPage from './WorkPage';
-import ExpPage from './ExpPage';
-import EventPage from './EventPage'
-import ContactPage from './ContactPage'
+import EventPage from './EventPage';
+import ActPage from './ActPage';
+import SportPage from './SportPage';
+import TravelPage from './TravelPage';
+import ContactPage from './ContactPage';
 
 export default function App() {
   return (
@@ -15,8 +17,10 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/work" element={<WorkPage />} />
-          <Route path="/experiences" element={<ExpPage />} />
           <Route path="/events" element={<EventPage />} />
+          <Route path="/acting" element={<ActPage />} />
+          <Route path="/sports" element={<SportPage />} />
+          <Route path="/travel" element={<TravelPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>
       </Routes>

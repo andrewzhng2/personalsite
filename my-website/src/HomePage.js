@@ -204,8 +204,10 @@ export default function HomePage() {
         <a href='/' className="logo">AZ</a>
         <nav className='nav-links'>
           <Link to="/work">Work</Link>
-          <Link to="/experiences">Experiences</Link>
           <Link to="/events">Events</Link>
+          <Link to="/acting">Acting</Link>
+          <Link to="/sports">Sports</Link>
+          <Link to="/travel">Travelling</Link>
           <Link to="/contact">Contact</Link>
         </nav>
       </header>

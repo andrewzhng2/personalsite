@@ -233,6 +233,13 @@ body, html {
   opacity: 0.6;
 }
 
+.no-data-msg {
+  color:#333;
+  margin: 20px;
+  align-items: center; 
+  opacity: 0.8;
+}
+
 .prod-name {
   flex: 1;
   font-weight: 600;
