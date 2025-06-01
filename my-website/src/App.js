@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 import WorkPage from './WorkPage';
 import EventPage from './EventPage';
 import ActPage from './ActPage';
-import SportPage from './SportPage';
+import SportsPage from './SportsPage';
 import TravelPage from './TravelPage';
 import ContactPage from './ContactPage';
 
@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/work" element={<WorkPage />} />
           <Route path="/events" element={<EventPage />} />
           <Route path="/acting" element={<ActPage />} />
-          <Route path="/sports" element={<SportPage />} />
+          <Route path="/sports" element={<SportsPage />} />
           <Route path="/travel" element={<TravelPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>

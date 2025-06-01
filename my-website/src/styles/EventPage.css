@@ -1,0 +1,130 @@
+.events-page {
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.event-row-container {
+  margin-bottom: 0px;
+}
+
+.event-row-title {
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  margin: 10px 0 10px 10px;
+  color: #333;
+  text-align: center;
+}
+
+.event-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  height: 30vh;
+}
+
+.event-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+
+.event-card:hover .event-overlay {
+  opacity: 1;
+}
+
+.event-text {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+/* Slide Animations */
+.slide-left {
+  animation: slideInLeft 4s ease forwards;
+}
+
+.slide-right {
+  animation: slideInRight 4s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Fullscreen View */
+.event-expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: black;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.event-expanded-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.event-expanded img {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+}
+
+.event-expanded h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.event-expanded p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}

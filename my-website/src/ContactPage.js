@@ -1,13 +1,14 @@
 import "./styles/ContactPage.css";
 
 let resume = require("./assets/AndrewZhangResume.pdf");
+let picture = require("./images/china.jpg");
 
 export default function ContactPage() {
   return (
     <div className="contact-container">
       <div className="contact-left">
         <img
-          src="/images/portrait.jpg" // use your image path
+          src={picture}
           alt="Andrew Zhang"
           className="contact-photo"
         />
@@ -17,9 +18,9 @@ export default function ContactPage() {
         <div className="contact-location">TORONTO</div>
 
         <div className="contact-info">
-          <h2>Andrew Zhang</h2>
-          <p>andrew.zhng2@gmail.com</p>
+          <p>Andrew Zhang</p>
           <p>(647) 550-8254</p>
+          <p>andrew.zhng2@gmail.com</p>
           <a
             href={resume}
             target="_blank"
@@ -31,7 +32,7 @@ export default function ContactPage() {
         </div>
 
         <div className="contact-socials">
-          <a href="https://instagram.com/andrewzhng" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://instagram.com/andrew.zhng" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.linkedin.com/in/andrew-zhang2/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://www.youtube.com/@andrewzhng" target="_blank" rel="noreferrer">YouTube</a>
         </div>
