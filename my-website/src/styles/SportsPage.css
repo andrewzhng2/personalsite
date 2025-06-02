@@ -14,8 +14,8 @@
 }
 
 .sport-column.dimmed {
-  flex: 0.7;
-  filter: brightness(60%);
+  flex: 1;
+  filter: brightness(100%);
 }
 
 .sport-column.hovered {
@@ -31,7 +31,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 22px;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
   font-weight: 700;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
   opacity: 0;

@@ -1,20 +1,21 @@
-import "./styles/SportsPage.css";
 import { useState } from "react";
+import "./styles/SportsPage.css";
 
 let track1 = require("./images/sportsimages/track1.jpg");
 let climb1 = require("./images/sportsimages/climb1.jpg");
 let soccer1 = require("./images/sportsimages/soccer1.jpg");
 let ball1 = require("./images/sportsimages/ball1.jpg");
 let swim1 = require("./images/sportsimages/swim1.jpg");
+let swim2 = require("./images/sportsimages/swim2.jpg");
+let swim3 = require("./images/sportsimages/swim3.jpg");
 let horse1 = require("./images/sportsimages/horse1.jpg");
 let golf1 = require("./images/sportsimages/golf1.jpg");
+let golf2 = require("./images/sportsimages/golf2.jpg");
 
 const sports = [
-  { name: "Track & Field", image: track1, description: "Sprinting, jumping, and relays." },
-  { name: "Sport Climbing", image: climb1, description: "Bouldering, lead climbing, and ice climbing." },
-  { name: "Soccer", image: soccer1, description: "Position: Right-footed Left Winger." },
   { name: "Basketball", image: ball1, description: "Drive-and-kick + lockdown D." },
-  { name: "Swimming", image: swim1, description: "Casual club-level stroke practice." },
+  { name: "Swimming", image: swim3, description: "Casual club-level stroke practice." },
+  { name: "Sport Climbing", image: climb1, description: "Bouldering, lead climbing, and ice climbing." },
   { name: "Equestrian", image: horse1, description: "Family legacy, still learning basics." },
   { name: "Golf", image: golf1, description: "Weekend range work & putting comps." }
 ];
@@ -24,7 +25,7 @@ export default function SportsPage() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <>
+    <div>
       <div className="sports-container">
         {sports.map((sport, i) => (
           <div
@@ -52,6 +53,6 @@ export default function SportsPage() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

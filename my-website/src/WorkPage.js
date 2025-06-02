@@ -1,4 +1,3 @@
-// components/WorkPage.jsx
 import React, { useState } from "react";
 import "./styles/WorkPage.css";
 
