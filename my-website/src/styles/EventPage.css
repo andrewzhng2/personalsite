@@ -2,6 +2,7 @@
   width: 100vw;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
+  background-color: white;
 }
 
 .event-row-container {
@@ -41,7 +42,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .event-card:hover .event-overlay {
@@ -50,7 +51,7 @@
 
 .event-text {
   color: white;
-  font-size: 24px;
+  font-size: 30px;
   letter-spacing: 2px;
   font-weight: 700;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);

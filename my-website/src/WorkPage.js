@@ -27,17 +27,17 @@ const workItems = [
   },
   {
     id: 3,
-    company: "Ace Beverage Group",
-    role: "Summer Sales Representative",
-    imageName: abg1,
-    description: "Manage and grow a portfolio of 60+ accounts, from major chains to local businesses. I was able to apply my business knowledge and communication skills to build relationships with clients and drive sales growth. This experience taught me the importance of innovation and building a real and good relationship with distribution.",
-  },
-  {
-    id: 4,
     company: "City of Richmond Hill",
     role: "QA and Project Management Intern",
     imageName: rhill1,
     description: "When that adult cheque hit as a 16 year old, I didn't even know what to do. ",
+  },
+  {
+    id: 4,
+    company: "Ace Beverage Group",
+    role: "Summer Sales Representative",
+    imageName: abg1,
+    description: "Manage and grow a portfolio of 60+ accounts, from major chains to local businesses. I was able to apply my business knowledge and communication skills to build relationships with clients and drive sales growth. This experience taught me the importance of innovation and building a real and good relationship with distribution.",
   },
   {
     id: 5,
@@ -55,17 +55,17 @@ const workItems = [
   },
   {
     id: 7,
-    company: "DoorDash/Instacart",
-    role: "Dasher/Shopper",
-    imageName: dash1,
-    description: "Finally got to use my simple math for something practical, calculating the value of a kilometer and time spent to see if orders were worth taking. It wasn't pretty work, but I was university broke",
-  },
-  {
-    id: 8,
     company: "Sansotei Ramen",
     role: "Kitchen Staff",
     imageName: sanso1,
     description: "Literally everything, just wanted to wash dishes at first, then it became the front line of the smallest hottest kitchen. The amazing team and managment made it so I didn't even realize how hot it was till I see now as a customer.",
+  },
+  {
+    id: 8,
+    company: "DoorDash/Instacart",
+    role: "Dasher/Shopper",
+    imageName: dash1,
+    description: "Finally got to use my simple math for something practical, calculating the value of a kilometer and time spent to see if orders were worth taking. It wasn't pretty work, but I was university broke",
   },
 ];
 
@@ -75,27 +75,21 @@ export default function WorkPage() {
   return (
     <div>
       <div className="work-page">
-        {workItems.map((item) => (
-          <div
-            key={item.id}
-            className="work-card"
-            onClick={() => setSelectedWork(item)}
-          >
+        {workItems.map((item, i) => (
+          <div key={i} className="work-card" onClick={() => setSelectedWork(item)}>
             <img src={item.imageName} alt={item.company} className="work-image"/>
             <div className="work-overlay">
-              <div>
-                <h2 className="work-company">{item.company}</h2>
-                <p className="work-title">{item.role}</p>
-              </div>
+              <h2 className="work-company">{item.company}</h2>
+              <p className="work-title">{item.role}</p>
             </div>
           </div>
         ))}
       </div>
 
       {selectedWork && (
-        <div className="work-expanded" onClick={() => setSelectedWork(null)}>
-          <div className="work-expanded" onClick={(e) => e.stopPropagation()}>
-            <button className="back-button" onClick={() => setSelectedWork(null)}>
+        <div className="work-modal-backdrop" onClick={() => setSelectedWork(null)}>
+          <div className="work-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setSelectedWork(null)}>
               ← Back
             </button>
             <img src={selectedWork.imageName} alt={selectedWork.company}/>

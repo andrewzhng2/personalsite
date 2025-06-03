@@ -2,34 +2,48 @@
    WORK PAGE GALLERY CSS
    ===================== */
 
+@keyframes fallIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.work-card:nth-child(1) { animation-delay: 0s; }
+.work-card:nth-child(4) { animation-delay: 0.3s; }
+.work-card:nth-child(7) { animation-delay: 0.6s; }
+.work-card:nth-child(2) { animation-delay: 0.9s; }
+.work-card:nth-child(5) { animation-delay: 1.2s; }
+.work-card:nth-child(8) { animation-delay: 1.5s; }
+.work-card:nth-child(3) { animation-delay: 1.8s; }
+.work-card:nth-child(6) { animation-delay: 2.1s; }
+
 .work-page {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  max-width: 1500px;
-  margin: 0 auto;
-  gap: 32px;
-  padding: 40px;
+  column-count: 3;
+  column-gap: 20px;
+  padding: 20px;
 }
 
 .work-card {
+  animation: fallIn 0.5s ease forwards;
+  opacity: 0; /* hide initially */
   position: relative;
+  break-inside: avoid;
+  margin-bottom: 20px;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
 }
 
-.work-card:hover {
-  transform: scale(1.02);
-}
-
-.work-image {
+.work-card img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
+  height: auto;
   display: block;
-  border-radius: 16px;
 }
 
 .work-overlay {
@@ -38,6 +52,8 @@
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
@@ -64,40 +80,49 @@
   opacity: 80%;
 }
 
-.work-expanded {
+.work-modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: white;
-  color: black;
-  z-index: 999;
+  background: rgba(0,0,0,0.6);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  z-index: 1000;
 }
 
-.work-expanded img {
-  max-width: 50%;
-  max-height: 40%;
+.work-modal {
+  background: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  color: black;
 }
 
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
+.close-btn {
   font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  font-size: 24px;
   border: none;
-  background: #333;
-  color: white;
-  border-radius: 8px;
+  background: none;
   cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.work-modal img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
 }

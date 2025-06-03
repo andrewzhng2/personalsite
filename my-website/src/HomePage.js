@@ -234,7 +234,7 @@ export default function HomePage() {
             <div className="dashboard-column basketball-theme">
               <h3>Yesterday's NBA Scores:</h3>
               {scores.length === 0 ? (
-                <p>No NBA Games :(</p>
+                <p className="no-data-msg">No NBA Games :(</p>
               ) : (
                 scores.slice(0, 10).map((game, i) => (
                   <div className="column-item" key={i}>
