@@ -16,67 +16,81 @@ const workItems = [
     company: "Snappy Innovations",
     role: "Software Developer & Business Analyst Intern",
     imageName: snap1,
-    description: "Got to work through the entire SaaS development lifecycle, requirements with clients, design, development, testing, and deployment. This is where I was first inspired to blend my interests in working directly with clients and software development. I loved the expereience in a startup that was hungry to get funding but great communication and innovation.",
+    description: `A startup competitor to Uber Eats but with a full suite of POS and all restaurant technologies you could ever need.
+    It was a great experience to work with a company of about 30+ people where every team was interconnected and I got to learn from conversations with every single person, even the CEO.
+    I'm grateful that I got to build and execute the full project lifecycle of a QR code system that allowed customer to order takeout without entering a busy restaurant.
+    From the initial idea, to the design, to the development in Flutter, pitching it to existing clients, and working with restaurant owners to refine features based on their needs.`,
   },
   {
     id: 2,
     company: "Johnson Controls",
     role: "Automation Engingeer Intern",
     imageName: jc1,
-    description: "Working at a company at this size taught me a lot the importance of structure and culture, especially from a management perspective. I was able to work on a variety of projects, from building automation systems for MacOS and Windows systems to Agile project management.",
+    description: `A 100000+ employee company that specializes in building automation and security systems.
+    I got the opportunity to work on the automation development team for our security systems: everything from keypads, fire alarms, panels etc. 
+    At first we used the Java-based Framework Selenium, but our team saw the potential of JS-based Cypress and our team worked on all that migration.
+    I learned about the processes of such a large-scale company and the importance of documentation and regulation between teams.`,
   },
   {
     id: 3,
     company: "City of Richmond Hill",
     role: "QA and Project Management Intern",
     imageName: rhill1,
-    description: "When that adult cheque hit as a 16 year old, I didn't even know what to do. ",
+    description: `When that adult cheque hit as a 16 year old, I didn't even know what to do. 
+    But what I really learnt from that experience while I was so young was how skills compound over time.
+    I got to see how I could start working on putting in the reps early on in my career, and how that could pay off later.`,
   },
   {
     id: 4,
     company: "Ace Beverage Group",
     role: "Summer Sales Representative",
     imageName: abg1,
-    description: "Manage and grow a portfolio of 60+ accounts, from major chains to local businesses. I was able to apply my business knowledge and communication skills to build relationships with clients and drive sales growth. This experience taught me the importance of innovation and building a real and good relationship with distribution.",
+    description: `An extremely innovation-focused RTD company where the company motto was LFG (Lead by Example, Fearlessly Innovate, and Get Shit Done!)
+    Completely out of my comfort zone, I was in a client facing role, in an industry I had never worked in before in alcohol, and in an entire region I've never been to with no safety nets of connections.
+    I basically ran across the country away from home for one of the greatest learning experiences of my life.`,
   },
   {
     id: 5,
     company: "Queen's University",
     role: "Private Tutor and Teaching Assistant",
     imageName: queen1,
-    description: "I got the chance to TA as early as my second year, OS and Intro to Programming. I was able to help students understand complex concepts and improve their coding skills. This experience taught me the importance of sympathy, understanding that you were once the student asking questions.",
+    description: `I got the chance to TA as early as my second year for Data Analytics, Operating Systems and Intro to Programming courses. 
+    This experience taught me the importance of sympathy, remember that you were once that student asking those questions.`,
   },
   {
     id: 6,
     company: "Kumon",
     role: "Kumon Assistant",
     imageName: kumon1,
-    description: "I kept being selected to work with the more troublesome kids because they said I was a kid at heart and I was the only one close to an adult that they listened to. Great kids really.",
+    description: `I kept being selected to work with the more troublesome kids because they said I was a kid at heart and 
+    I was the only one close to an adult that they listened to. Great kids really. 
+    What I really learned is that kids just want to be heard and some attention, maybe just like the adults.`,
   },
   {
     id: 7,
     company: "Sansotei Ramen",
     role: "Kitchen Staff",
     imageName: sanso1,
-    description: "Literally everything, just wanted to wash dishes at first, then it became the front line of the smallest hottest kitchen. The amazing team and managment made it so I didn't even realize how hot it was till I see now as a customer.",
+    description: `I just wanted to wash dishes at first, then it became the front line of the smallest, hottest kitchen ever. 
+    I didn't even realize how high the pressure got in rush hour or how crammed we were cause of how great that team and management were.`,
   },
   {
     id: 8,
     company: "DoorDash/Instacart",
     role: "Dasher/Shopper",
     imageName: dash1,
-    description: "Finally got to use my simple math for something practical, calculating the value of a kilometer and time spent to see if orders were worth taking. It wasn't pretty work, but I was university broke",
+    description: "Finally got to use my simple math for something practical, calculating the value of a kilometer and time spent to see if orders were worth taking. It wasn't pretty work, but I was university broke.",
   },
 ];
 
 export default function WorkPage() {
-  const [selectedWork, setSelectedWork] = useState(null);
+  const [selected, setSelected] = useState(null);
 
   return (
     <div>
       <div className="work-page">
         {workItems.map((item, i) => (
-          <div key={i} className="work-card" onClick={() => setSelectedWork(item)}>
+          <div key={i} className="work-card" onClick={() => setSelected(item)}>
             <img src={item.imageName} alt={item.company} className="work-image"/>
             <div className="work-overlay">
               <h2 className="work-company">{item.company}</h2>
@@ -86,16 +100,15 @@ export default function WorkPage() {
         ))}
       </div>
 
-      {selectedWork && (
-        <div className="work-modal-backdrop" onClick={() => setSelectedWork(null)}>
+      {selected && (
+        <div className="work-modal-backdrop" onClick={() => setSelected(null)}>
           <div className="work-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setSelectedWork(null)}>
+            <button className="close-btn" onClick={() => setSelected(null)}>
               ← Back
             </button>
-            <img src={selectedWork.imageName} alt={selectedWork.company}/>
-            <h2>{selectedWork.company}</h2>
-            <p>{selectedWork.title}</p>
-            <p>{selectedWork.description}</p>
+            <img src={selected.imageName} alt={selected.company}/>
+            <h2>{selected.role}</h2>
+            <p>{selected.description}</p>
           </div>
         </div>
       )}

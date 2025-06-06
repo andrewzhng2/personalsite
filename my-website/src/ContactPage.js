@@ -15,7 +15,7 @@ export default function ContactPage() {
       </div>
 
       <div className="contact-right">
-        <div className="contact-location">TORONTO</div>
+        <div className="contact-location">If you're curious about WHY I DO WHAT I DO...</div>
 
         <div className="contact-info">
           <p>Andrew Zhang</p>

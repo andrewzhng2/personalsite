@@ -19,21 +19,21 @@ export default function ActPage() {
           <img src={dss1} alt="DSS: Nosebleed" />
           <div className="acting-text">
             <h2>Nosebleed</h2>
-            <p>I got to play the lead role as my dream job, a talk show host, but the production was set in a satirical comedy about a nosebleed. </p>
+            <p>I got to play the lead role as my dream job, a talk show host, in a theatre production set in a satirical comedy about a nosebleed. </p>
           </div>
         </div>
         <div className="acting-block reverse">
           <img src={multi1} alt="Multicoloured Toothpaste" />
           <div className="acting-text">
             <h2>Multicoloured Toothpaste</h2>
-            <p>I got to play the storyteller role as one of two twin bunnies in a lovecraftian horror.</p>
+            <p>I got to play the storyteller role as one of two twin bunnies, Modernity and Monotony, in a lovecraftian horror.</p>
           </div>
         </div>
         <div className="acting-block">
           <img src={lake1} alt="Lake Effect" />
           <div className="acting-text">
             <h2>Lake Effect</h2>
-            <p>I got to sing and dance in an interpretive production about Lake Ontario.</p>
+            <p>I got to sing and dance in an interpretive movement production about Lake Ontario.</p>
           </div>
         </div>
         <p>On restarting my journey of theatre in my last uni year, last time being in high school, the whole theatre community I was in was so nice. Everybody was so helpful and guiding me on my direction. The professor that listened to my concerns and gave me all the books, phenomenal writers who created so creatively, directors who transformed text into a fantastic production, and amazing cast and crew all with their own unique individual journey.</p>

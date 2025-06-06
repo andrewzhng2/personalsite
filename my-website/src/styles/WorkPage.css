@@ -81,7 +81,9 @@
 }
 
 .work-modal-backdrop {
+  overflow: hidden;
   position: fixed;
+  inset: 0;
   top: 0;
   left: 0;
   width: 100vw;
@@ -95,14 +97,27 @@
 
 .work-modal {
   background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 30px;
   width: 90%;
+  max-height: 90vh;
   max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.2);
   position: relative;
   animation: fadeIn 0.3s ease;
   color: black;
+}
+
+.work-modal p {
+  color: rgb(109, 109, 109);
+}
+
+.work-modal img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
 }
 
 .close-btn {
@@ -119,10 +134,4 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-.work-modal img {
-  width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
 }

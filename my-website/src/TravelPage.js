@@ -22,21 +22,21 @@ let miami3 = require("./images/travelimages/miami3.jpg");
 let amst1 = require("./images/travelimages/amst1.jpg");
 
 const travelItems = [
-  { id: 1, city: "Chicago", country: "USA", image: chi1 },
-  { id: 2, city: "Mont Tremblant", country: "Canada", image: mont1 },
-  { id: 3, city: "Punta Cana", country: "Dominican Republic", image: punta1 },
-  { id: 4, city: "Kentucky", country: "USA", image: ken1 },
-  { id: 5, city: "Paris", country: "France", image: fra1 },
-  { id: 6, city: "NYC", country: "USA", image: nyc1 },
-  { id: 7, city: "Chongqing", country: "China", image: china5 },
-  { id: 8, city: "London", country: "England", image: eng1 },
-  { id: 9, city: "Amazon Jungle", country: "Ecuador", image: ecu1 },
-  { id: 10, city: "Tokyo", country: "Japan", image: jap1 },
-  { id: 11, city: "Pizza Tour", country: "Boston", image: pizza2},
-  { id: 12, city: "Heidelberg", country: "Germany", image: heid1 },
-  { id: 13, city: "Cruise!", country: "Secret 1", image: cruise1 },
-  { id: 14, city: "Miami", country: "US", image: miami3 },
-  { id: 15, city: "Amsterdam", country: "Netherlands", image: amst1 },
+  { id: 1, city: "Chicago", country: "USA", image: chi1, description:`Chi-town, best food I've ever had, flicking the bean, what a city.` },
+  { id: 2, city: "Mont Tremblant", country: "Canada", image: mont1, description:`White-water rafting, via ferrata, ziplining, great trip during COVID.` },
+  { id: 3, city: "Punta Cana", country: "Dominican Republic", image: punta1, description:`Just sit back and relax, infinite food, drinks, sun. What a time with the boys.` },
+  { id: 4, city: "Kentucky", country: "USA", image: ken1, description:`Red River Gorge, what a uniquely beautiful place to climb. KFC also so good here.` },
+  { id: 5, city: "Paris", country: "France", image: fra1, description:`Opulence at its finest, get a baguette and just look at all the things you can't afford. At least you can eat cake!` },
+  { id: 6, city: "NYC", country: "USA", image: nyc1, description:`Concrete Jungle Tomato, basically Toronto but better in every way.` },
+  { id: 7, city: "Chongqing", country: "China", image: china5, description:`The real Sci-Fi city, so busy, but so beautiful.` },
+  { id: 8, city: "London", country: "England", image: eng1, description:`Who else trip planning something like at 14? At the same time, shoutout to my mom for believing in me. This London/Manchester trip was the best I've been on. Sherlock, KSI, Austin Powers.` },
+  { id: 9, city: "Amazon Jungle", country: "Ecuador", image: ecu1, description:`Got selected to help build an elementary school in the AMAZON JUNGLE. 50 people went on this trip, 40 got sick. Me and my boy didn't ;).` },
+  { id: 10, city: "Tokyo", country: "Japan", image: jap1 , description:`Yeah, everything you hear about Japan is true. If you wanna see something whack tho, people watch on the subway.`},
+  { id: 11, city: "Pizza Tour", country: "Boston", image: pizza2, description:`You know the rules. One bite. Dave Portnoy inspired this trip and we learned a valuable lesson: don't trust everything you see online. Apizza is good tho.`},
+  { id: 12, city: "Heidelberg", country: "Germany", image: heid1, description:`What an underrated country, I can't wait to go back. Heidelberg is a small university town in the middle of a valley with a river in between it. And the only place I've taken a free ride from a stranger.` },
+  { id: 13, city: "Cruise!", country: "Secret 1", image: cruise1, description:`I can't even describe how much I love cruises. My brother is deathly seasick, so it's banned now, but the way some people got it for trains, I got it for cruise ships.` },
+  { id: 14, city: "Miami", country: "US", image: miami3, description:`Opulent vibes of Miami mixed with the relaxation of Punta Cana. Also don't go to E11ven unless you do your research.` },
+  { id: 15, city: "Amsterdam", country: "Netherlands", image: amst1, description:`My first solo trip at 17, thanks to my brother having moved there for a year. Biking was somehow better than walking and driving there.`},
 ];
 
 export default function TravelPage() {
@@ -80,12 +80,12 @@ export default function TravelPage() {
       ))}
 
       {selected && (
-        <div className="travel-expanded" onClick={() => setSelected(null)}>
-          <div className="travel-expanded" onClick={e => e.stopPropagation()}>
-            <button className="back-button" onClick={() => setSelected(null)}>← Back</button>
+        <div className="travel-modal-backdrop" onClick={() => setSelected(null)}>
+          <div className="travel-modal" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setSelected(null)}>← Back</button>
             <img src={selected.image} alt={selected.city} />
             <h2>{selected.city}</h2>
-            <p>{selected.country}</p>
+            <p>{selected.description}</p>
           </div>
         </div>
       )}

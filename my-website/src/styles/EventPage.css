@@ -2,7 +2,7 @@
   width: 100vw;
   overflow-x: hidden;
   font-family: 'Montserrat', sans-serif;
-  background-color: white;
+  background-color: #FFBF00;
 }
 
 .event-row-container {
@@ -14,7 +14,7 @@
   font-weight: bold;
   letter-spacing: 4px;
   margin: 10px 0 10px 10px;
-  color: #333;
+  color: #12130F;
   text-align: center;
 }
 
@@ -78,55 +78,58 @@
 }
 
 /* Fullscreen View */
-.event-expanded {
+.event-modal-backdrop {
+  overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: white;
-  color: black;
-  z-index: 999;
+  background: rgba(0,0,0,0.6);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  z-index: 1000;
 }
 
-.event-expanded-content {
-  text-align: center;
-  max-width: 800px;
-}
-
-.event-expanded img {
-  width: 100%;
-  max-height: 60vh;
-  object-fit: cover;
+.event-modal {
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 30px;
+  width: 90%;
+  max-height: 90vh;
+  max-width: 600px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  color: black;
 }
 
-.event-expanded h2 {
+.close-btn {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  top: 6px;
+  left: 16px;
+  font-size: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.event-modal img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.event-modal h2 {
   font-size: 28px;
   margin-bottom: 12px;
 }
 
-.event-expanded p {
+.event-modal p {
   font-size: 18px;
   line-height: 1.6;
-}
-
-.back-button {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  background: #333;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
 }

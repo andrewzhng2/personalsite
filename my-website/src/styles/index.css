@@ -127,7 +127,12 @@ body, html {
   letter-spacing: 1px;
   opacity: 0.8;
   text-align: left;
-  padding: 20px 40px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px 340px;
+  background-color: #FFD9CF;
+  border: 3px solid #000000;
+  border-radius: 10px; 
 }
 
 /* ---------------- Live Sections Text ---------------- */
