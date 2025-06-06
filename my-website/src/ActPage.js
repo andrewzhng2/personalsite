@@ -36,7 +36,7 @@ export default function ActPage() {
             <p>I got to sing and dance in an interpretive movement production about Lake Ontario.</p>
           </div>
         </div>
-        <p>On restarting my journey of theatre in my last uni year, last time being in high school, the whole theatre community I was in was so nice. Everybody was so helpful and guiding me on my direction. The professor that listened to my concerns and gave me all the books, phenomenal writers who created so creatively, directors who transformed text into a fantastic production, and amazing cast and crew all with their own unique individual journey.</p>
+        <p className="story">On resdiscovering my love for theatre in my last year of uni, I was a bit, honestly, scared since the last time I acted was in high school. But what's special is that the whole theatre community I was in was so nice. Everybody was so helpful and guiding me on my direction. The professor that listened to my concerns and gave me all the books, phenomenal writers who created so creatively, directors who transformed text into a fantastic production, and amazing cast and crew all with their own unique individual journey.</p>
       </div>
 
       <div className="acting-resume">
