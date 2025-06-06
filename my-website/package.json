@@ -1,7 +1,7 @@
 {
   "name": "my-website",
   "version": "0.1.0",
-  "homepage": "https://andrewzhng2.github.io/personalsite/",
+  "homepage": "https://andrewzhng2.github.io/personalsite/my-website",
   "private": true,
   "dependencies": {
     "@balldontlie/sdk": "^1.2.2",
