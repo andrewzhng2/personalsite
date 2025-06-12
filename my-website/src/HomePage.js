@@ -227,7 +227,7 @@ export default function HomePage() {
         </section>
 
         <div className="clock">
-          <strong>Today's Date and Time (PST):</strong> {time}
+          <strong></strong> {time}
         </div>
 
         <section className="live-dashboard">
