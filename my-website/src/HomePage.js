@@ -222,7 +222,7 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p>Finally, a self-built personal hub for the things I cared about. Please explore around to see because everything has a reason! This website was fully built by my team. (team = AI + me)
+          <p>I'm probably the most fun guy you'll ever meet. I love trying new things, seeing different perspectives, and doing all the fun things in life. I am a relentless doer, a pragmatic dreamer, and a curious completionist. If I want to do/try something, I will research, network, find options, and execute. I make things happen.
           </p>
         </section>
 

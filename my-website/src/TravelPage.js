@@ -89,6 +89,8 @@ export default function TravelPage() {
           </div>
         </div>
       )}
+
+      <p>I fully endorse going all out when travelling, why try for 50% when it can be 100%. Put all your heart into it, you'll still feel like you missed out on so much, but at least you can say you tried. (yes this means that travelling for work or school is not it.)</p>
     </div>
   );
 }
