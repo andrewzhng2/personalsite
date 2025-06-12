@@ -43,7 +43,7 @@ export default function ActPage() {
         <div className="acting-block reverse">
           <img src={spot1} alt="Spotlight Academy" />
           <div className="acting-text">
-            <h2>Multicoloured Toothpaste</h2>
+            <h2>Spotlight Academy</h2>
             <p>An intermediate acting class for film that I took with an excellent and understanding teacher.</p>
             <p>What I Learned: Acting in front of a camera, connecting with partner, letting go.</p>
           </div>
