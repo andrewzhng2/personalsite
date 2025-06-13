@@ -11,4 +11,4 @@ What I Learned:
 * and most importantly, what's important to me!
 
 Thanks for visiting!
-[https://andrewzhng2.github.io/personalsite/](https://www.andrewzhng.com/)
+[https://andrewzhng2.com](https://www.andrewzhng.com/)
