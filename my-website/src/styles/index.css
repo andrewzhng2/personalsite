@@ -31,6 +31,10 @@ body, html {
   animation-delay: 1.5s;
 }
 
+.intro-text {
+  font-size: 20px;
+}
+
 @keyframes slideLeft {
   0% {
     transform: translateX(0);
