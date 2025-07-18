@@ -9,10 +9,9 @@ const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" 
 const titles = [
   "a sales engineer.",
   "a content creator.",
+  "an explorer.",
   "a chef.",
-  "a soccer player, climber, baller.",
-  "a technical consultant.",
-  "an events coordinator.",
+  "a outdoor sport climber",
   "an actor."
 ];
 
@@ -222,8 +221,9 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p>I'm probably the most fun guy you'll ever meet. I love trying new things, seeing different perspectives, and doing all the fun things in life. I am a relentless doer, a pragmatic dreamer, and a curious completionist. I make things happen.
-          </p>
+          <p>I'm a passionate 22 year old who just graduated with a Comp Sci degree from Queens. I'm currently trying a completely different career path in sales, in a field I had no experience (which is alcohol RTDs), in the complete opposite lifestyle: The West Coast.</p>
+          <p>My three values right now are: Community, Health, Growth. My community is what gets me out of bed in the morning, they have helped build me to who I am today. I want to keep pushing my limits and growing so that I can provide for my community. (Can't do that without being available, so that's why health is top priority.)</p>
+          <p>So please explore my website and hopefully, it gives you some insight into who I truly am.</p>
         </section>
 
         <div className="clock">
