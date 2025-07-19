@@ -15,7 +15,7 @@ export default function ContactPage() {
       </div>
 
       <div className="contact-right">
-        <div className="contact-location">BRAVERY Is A Muscle That NEEDS To Be Exercised</div>
+        <div className="contact-location">BRAVERY Is A Muscle That NEEDS To Be Exercised!</div>
 
         <div className="contact-info">
           <p>Andrew Zhang</p>
