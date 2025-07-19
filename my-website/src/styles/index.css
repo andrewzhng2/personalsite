@@ -31,10 +31,6 @@ body, html {
   animation-delay: 1.5s;
 }
 
-.intro-text {
-  font-size: 20px;
-}
-
 @keyframes slideLeft {
   0% {
     transform: translateX(0);
@@ -112,6 +108,10 @@ body, html {
 .hero p {
   font-size: 40px;
   font-weight: 700;
+}
+
+.hero p .intro-text {
+  font-size: 20px;
 }
 
 .typed::after {
