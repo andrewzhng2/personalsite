@@ -110,7 +110,7 @@ body, html {
   font-weight: 700;
 }
 
-.hero p .intro-text {
+.hero p.intro-text {
   font-size: 20px;
 }
 
