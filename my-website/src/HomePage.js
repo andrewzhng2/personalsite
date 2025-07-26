@@ -221,7 +221,7 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p className='intro-text'>I’m the son of two amazing parents, my dad a mathematical, philosophical entrepreneur, and my mom, a context-driven, creative and caring force in my life. This has in turn given me this immense draw towards balancing between left-side and right-side brain activities.</p>
+          <p className='intro-text'>I’m the son of two amazing parents: my dad a mathematical, philosophical entrepreneur + my mom, a context-driven, creative and caring force in my life. This fun combination has in turn given me this intense calling towards left-side AND right-side brain activities. Constantly doing and trying to balancing them.</p>
           <p className='intro-text'>I’m a Queen's computer science major that just graduated with distinction but also finished my last school year with multi-night performances for 3 different theatre shows in Drama extracurriculars. I also climb 80 foot ice walls and ride horses.</p>
           <p className='intro-text'>I'm currently out on the West Coast, selling RTDs, hiking up mountains, and jumping in lakes. Did I mention I don't get bit by mosquitoes?</p>
         </section>
