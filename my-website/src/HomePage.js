@@ -221,9 +221,9 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p className='intro-text'>I'm a passionate 22 year old who just graduated with a Comp Sci degree from Queens. I'm currently trying a completely different career path in sales, in a field I had no experience (which is alcohol RTDs), in the complete opposite lifestyle: The West Coast.</p>
-          <p className='intro-text'>My three values right now are: Community, Health, Growth. My community is what gets me out of bed in the morning, they have helped build me to who I am today. I want to keep pushing my limits and growing so that I can provide for my community. (Can't do that without being available, so that's why health is top priority.)</p>
-          <p className='intro-text'>So please explore my website and hopefully, it gives you some insight into who I truly am.</p>
+          <p className='intro-text'>I’m the son of two amazing parents, my dad a mathematical, philosophical entrepreneur, and my mom, a context-driven, creative and caring force in my life. This has in turn given me this immense draw towards balancing between left-side and right-side brain activities.</p>
+          <p className='intro-text'>I’m a Queen's computer science major that just graduated with distinction but also finished my last school year with multi-night performances for 3 different theatre shows in Drama extracurriculars. I also climb 80 foot ice walls and ride horses.</p>
+          <p className='intro-text'>I'm currently out on the West Coast, selling RTDs, hiking up mountains, and jumping in lakes. Did I mention I don't get bit by mosquitoes?</p>
         </section>
 
         <div className="clock">
