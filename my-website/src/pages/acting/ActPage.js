@@ -1,10 +1,10 @@
-import "./styles/ActPage.css";
+import "../../styles/ActPage.css";
 
-let headshot = require("./images/actimages/happyHeadshot.jpg");
-let dss1 = require("./images/actimages/dss1.jpg");
-let lake1 = require("./images/actimages/lake1.jpg");
-let multi1 = require("./images/actimages/multi1.jpg");
-let spot1 = require("./images/actimages/spot1.jpg");
+let headshot = require("./actimages/happyHeadshot.jpg");
+let dss1 = require("./actimages/dss1.jpg");
+let lake1 = require("./actimages/lake1.jpg");
+let multi1 = require("./actimages/multi1.jpg");
+let spot1 = require("./actimages/spot1.jpg");
 
 let resume = require("./assets/AndrewZhangActingResume.pdf");
 

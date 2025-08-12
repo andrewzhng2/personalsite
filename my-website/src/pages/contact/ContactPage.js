@@ -1,7 +1,7 @@
-import "./styles/ContactPage.css";
+import "../../styles/ContactPage.css";
 
 let resume = require("./assets/AndrewZhangResume.pdf");
-let picture = require("./images/china.jpg");
+let picture = require("./china.jpg");
 
 export default function ContactPage() {
   return (
@@ -15,7 +15,7 @@ export default function ContactPage() {
       </div>
 
       <div className="contact-right">
-        <div className="contact-location">BRAVERY Is A Muscle That NEEDS To Be Exercised!</div>
+        <div className="contact-location">For The Love of the Game!</div>
 
         <div className="contact-info">
           <p>Andrew Zhang</p>

@@ -1,19 +1,19 @@
 import { useState } from "react";
-import "./styles/SportsPage.css";
+import "../../styles/SportsPage.css";
 
-let track1 = require("./images/sportsimages/track1.jpg");
-let climb1 = require("./images/sportsimages/climb1.jpg");
-let climb2 = require("./images/sportsimages/climb2.jpg");
-let soccer1 = require("./images/sportsimages/soccer1.jpg");
-let ball1 = require("./images/sportsimages/ball1.jpg");
-let ball2 = require("./images/sportsimages/ball2.jpg");
-let swim1 = require("./images/sportsimages/swim1.jpg");
-let swim2 = require("./images/sportsimages/swim2.jpg");
-let swim3 = require("./images/sportsimages/swim3.jpg");
-let horse1 = require("./images/sportsimages/horse1.jpg");
-let horse2 = require("./images/sportsimages/horse3.jpg");
-let golf1 = require("./images/sportsimages/golf1.jpg");
-let golf2 = require("./images/sportsimages/golf2.jpg");
+let track1 = require("./sportsimages/track1.jpg");
+let climb1 = require("./sportsimages/climb1.jpg");
+let climb2 = require("./sportsimages/climb2.jpg");
+let soccer1 = require("./sportsimages/soccer1.jpg");
+let ball1 = require("./sportsimages/ball1.jpg");
+let ball2 = require("./sportsimages/ball2.jpg");
+let swim1 = require("./sportsimages/swim1.jpg");
+let swim2 = require("./sportsimages/swim2.jpg");
+let swim3 = require("./sportsimages/swim3.jpg");
+let horse1 = require("./sportsimages/horse1.jpg");
+let horse2 = require("./sportsimages/horse3.jpg");
+let golf1 = require("./sportsimages/golf1.jpg");
+let golf2 = require("./sportsimages/golf2.jpg");
 
 const sports = [
   { name: "Basketball", image: ball1, image2: ball2, 

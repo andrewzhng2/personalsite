@@ -2,17 +2,15 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { BalldontlieAPI } from "@balldontlie/sdk";
-import teamIdMap from './team_id_mapping.json';
+import teamIdMap from '../../team_id_mapping.json';
 
 const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" });
 
 const titles = [
   "a sales engineer.",
-  "a content creator.",
-  "an explorer.",
+  "a computer science graduate.",
   "a chef.",
-  "a outdoor sport climber",
-  "an actor."
+  "a sport climber",
 ];
 
 export const rankedCities = [
@@ -221,9 +219,10 @@ export default function HomePage() {
         <section className="hero">
           <h1>Hey there, I'm Andrew Zhang!</h1>
           <h2>I'm <span className="typed">{typed}</span></h2>
-          <p className='intro-text'>I’m the son of two amazing parents: my dad who's a mathematical, philosophical entrepreneur + my mom who's a charismatic, creative and caring force in my life. This fun combination has in turn given me this intense calling towards left-side AND right-side brain activities. Constantly doing and trying to balancing them.</p>
+          <p className='intro-text'>"Ultimately there is nothing that maximizes talent more than love for the game." - Bill Belicheck, The Art of Winning</p>
           <p className='intro-text'>I’m a Queen's computer science major that just graduated with distinction but also finished my last school year with multi-night performances for 3 different theatre shows in Drama extracurriculars. I also climb 80 foot ice walls and ride horses.</p>
-          <p className='intro-text'>I'm currently out on the West Coast, selling RTDs, hiking up mountains, and jumping in lakes. Did I mention I don't get bit by mosquitoes?</p>
+          <p className='intro-text'>I'm currently out on the West Coast, selling RTDs, hiking up mountains, surfing the sandy beaches, and jumping in rivers!</p>
+          <p className='intro-text'></p>
         </section>
 
         <div className="clock">

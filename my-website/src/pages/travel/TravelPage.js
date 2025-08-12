@@ -1,25 +1,25 @@
-import './styles/TravelPage.css';
+import '../../styles/TravelPage.css';
 import { useEffect, useState } from 'react';
 
-let chi1 = require("./images/travelimages/chi1.jpg");
-let mont1 = require("./images/travelimages/mont1.jpg");
-let punta1 = require("./images/travelimages/punta1.jpg");
-let ken1 = require("./images/travelimages/ken1.jpg");
-let fra1 = require("./images/travelimages/fra1.jpg");
-let nyc1 = require("./images/travelimages/nyc1.jpg");
-let nyc2 = require("./images/travelimages/nyc2.jpg");
-let china1 = require("./images/travelimages/china1.jpg");
-let china5 = require("./images/travelimages/china5.jpg");
-let eng1 = require("./images/travelimages/eng1.jpg");
-let ecu1 = require("./images/travelimages/ecu2.jpg");
-let jap1 = require("./images/travelimages/jap1.jpg");
-let cruise1 = require("./images/travelimages/cruise1.jpg");
-let pizza1 = require("./images/travelimages/pizza1.jpg");
-let pizza2 = require("./images/travelimages/pizza2.jpg");
-let heid1 = require("./images/travelimages/heid1.jpg");
-let miami1 = require("./images/travelimages/miami1.jpg");
-let miami3 = require("./images/travelimages/miami3.jpg");
-let amst1 = require("./images/travelimages/amst1.jpg");
+let chi1 = require("./travelimages/chi1.jpg");
+let mont1 = require("./travelimages/mont1.jpg");
+let punta1 = require("./travelimages/punta1.jpg");
+let ken1 = require("./travelimages/ken1.jpg");
+let fra1 = require("./travelimages/fra1.jpg");
+let nyc1 = require("./travelimages/nyc1.jpg");
+let nyc2 = require("./travelimages/nyc2.jpg");
+let china1 = require("./travelimages/china1.jpg");
+let china5 = require("./travelimages/china5.jpg");
+let eng1 = require("./travelimages/eng1.jpg");
+let ecu1 = require("./travelimages/ecu2.jpg");
+let jap1 = require("./travelimages/jap1.jpg");
+let cruise1 = require("./travelimages/cruise1.jpg");
+let pizza1 = require("./travelimages/pizza1.jpg");
+let pizza2 = require("./travelimages/pizza2.jpg");
+let heid1 = require("./travelimages/heid1.jpg");
+let miami1 = require("./travelimages/miami1.jpg");
+let miami3 = require("./travelimages/miami3.jpg");
+let amst1 = require("./travelimages/amst1.jpg");
 
 const travelItems = [
   { id: 1, city: "Chicago", country: "USA", image: chi1, description:`Chi-town, best food I've ever had, flicking the bean, what a city.` },

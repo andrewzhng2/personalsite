@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import "./styles/WorkPage.css";
+import "../../styles/WorkPage.css";
 
-let snap1 = require("./images/workimages/snap1.jpg");
-let jc1 = require("./images/workimages/jc1.jpg");
-let abg1 = require("./images/workimages/abg1.jpg");
-let rhill1 = require("./images/workimages/rhill1.jpg");
-let sanso1 = require("./images/workimages/sanso1.jpg");
-let kumon1 = require("./images/workimages/kumon1.jpg");
-let dash1 = require("./images/workimages/dash1.jpg");
-let queen1 = require("./images/workimages/queen1.jpg");
+let snap1 = require("./workimages/snap1.jpg");
+let jc1 = require("./workimages/jc1.jpg");
+let abg1 = require("./workimages/abg1.jpg");
+let rhill1 = require("./workimages/rhill1.jpg");
+let sanso1 = require("./workimages/sanso1.jpg");
+let kumon1 = require("./workimages/kumon1.jpg");
+let dash1 = require("./workimages/dash1.jpg");
+let queen1 = require("./workimages/queen1.jpg");
 
 const workItems = [
   {
