@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/WorkPage.css";
+import "./styles/WorkPage.css";
 
 let snap1 = require("./workimages/snap1.jpg");
 let jc1 = require("./workimages/jc1.jpg");

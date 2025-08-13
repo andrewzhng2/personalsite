@@ -1,4 +1,4 @@
-import "../../styles/ContactPage.css";
+import "./styles/ContactPage.css";
 
 let resume = require("./assets/AndrewZhangResume.pdf");
 let picture = require("./china.jpg");

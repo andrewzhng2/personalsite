@@ -1,16 +1,29 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { BalldontlieAPI } from "@balldontlie/sdk";
-import teamIdMap from '../../team_id_mapping.json';
+
+// Removed NBA/team imports used by previous dashboard implementation
+
+// Card images for the four-feature grid
+// Using representative images from each section
+// Paths are relative to this file (pages/home)
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const workCard = require('../work/workimages/abg1.jpg');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const sportsCard = require('../sports/sportsimages/ball2.jpg');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const actingCard = require('../acting/actimages/mrmumray.jpg');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const travelCard = require('../travel/travelimages/musk1.jpg');
 
 const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" });
 
 const titles = [
+  "a jack of all trades.",
   "a sales engineer.",
-  "a computer science graduate.",
+  "a CS graduate.",
   "a chef.",
-  "a sport climber",
+  "a sport climber.",
 ];
 
 export const rankedCities = [
@@ -32,6 +45,7 @@ export default function HomePage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
   const [scores, setScores] = useState([]);
+  const [shows, setShows] = useState([]);
   const [weather, setWeather] = useState([]);
 
   // HIDE INTRO
@@ -88,86 +102,63 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
-  // FETCH NBA SCORES
+  // FETCH NBA SCORES (yesterday)
   useEffect(() => {
-  const fetchLiveScores = async () => {
-    try {
-      const yesterday = new Date();
-      yesterday.setDate(yesterday.getDate() - 1);
-      const yyyy = yesterday.getFullYear();
-      const mm = String(yesterday.getMonth() + 1).padStart(2, '0');
-      const dd = String(yesterday.getDate()).padStart(2, '0');
-      const dateStr = `${yyyy}-${mm}-${dd}`;
+    const fetchLiveScores = async () => {
+      try {
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yyyy = yesterday.getFullYear();
+        const mm = String(yesterday.getMonth() + 1).padStart(2, '0');
+        const dd = String(yesterday.getDate()).padStart(2, '0');
+        const dateStr = `${yyyy}-${mm}-${dd}`;
 
-      const data = await api.nba.getGames({dates:[dateStr]});
+        const data = await api.nba.getGames({ dates: [dateStr] });
 
-      const formatted = data.data.map(game => {
-        const home = {
-          id: game.home_team.id,
-          short: game.home_team.abbreviation,
-          full: game.home_team.full_name,
-          score: game.home_team_score,
-        };
-        const away = {
-          id: game.visitor_team.id,
-          short: game.visitor_team.abbreviation,
-          full: game.visitor_team.full_name,
-          score: game.visitor_team_score,
-        };
-
-        const winner = home.score > away.score ? "home" : "away";
-
-        return { home, away, winner, status: game.status };
-      });
-
-      setScores(formatted);
-
-    } catch (err) {
-      console.error("Failed to fetch live box scores:", err);
-      setScores([{ game: "Could not fetch live scores.", score: "", status: "" }]);
-    }
-  };
-
-  fetchLiveScores();
+        const formatted = data.data.map(game => {
+          const home = {
+            short: game.home_team.abbreviation,
+            score: game.home_team_score,
+          };
+          const away = {
+            short: game.visitor_team.abbreviation,
+            score: game.visitor_team_score,
+          };
+          return { home, away };
+        });
+        setScores(formatted);
+      } catch (err) {
+        console.error("Failed to fetch live box scores:", err);
+        setScores([]);
+      }
+    };
+    fetchLiveScores();
   }, []);
 
   // FETCH BROADWAY SHOWS
-  const [shows, setShows] = useState([]);
-
   useEffect(() => {
     const fetchBroadway = async () => {
       try {
         const res = await fetch("https://broadwayworldapi.onrender.com/broadway");
         const data = await res.json();
-
         const cleaned = data.map((item) => {
-          const [avgPrice, topPrice] = item.avg_ticket.split("$").filter(Boolean);
-          const [showName, theater] = item.show.split("\n");
-
+          const [showName] = item.show.split("\n");
           return {
             rank: item.rank,
             show: showName?.trim(),
-            theater: theater?.trim(),
-            gross: item.gross,
-            capacity: item.capacity,
-            avgTicket: `$${avgPrice}`,
-            topTicket: `$${topPrice}`,
           };
         });
-
         setShows(cleaned);
       } catch (err) {
         console.error("Error fetching Broadway shows:", err);
       }
     };
-
     fetchBroadway();
   }, []);
 
-  // FETCH WEATHER
+  // FETCH WEATHER (top cities)
   useEffect(() => {
-    const API_KEY = "02cd484c5619492fa0303704252805"; // Replace with your actual key
-
+    const API_KEY = "02cd484c5619492fa0303704252805";
     const fetchWeather = async () => {
       try {
         const responses = await Promise.all(
@@ -176,20 +167,15 @@ export default function HomePage() {
               .then(res => res.json())
           )
         );
-
         const formatted = responses.map((data, index) => ({
           city: rankedCities[index],
-          temp: Math.round(data.current.temp_c),
-          icon: data.current.condition.icon,
-          desc: data.current.condition.text,
+          temp: Math.round(data.current?.temp_c ?? 0),
         }));
-
         setWeather(formatted);
       } catch (err) {
         console.error("Failed to fetch weather:", err);
       }
     };
-
     fetchWeather();
   }, []);
 
@@ -202,9 +188,8 @@ export default function HomePage() {
         <nav className='nav-links'>
           <Link to="/work">Work</Link>
           <Link to="/events">Events</Link>
-          <Link to="/acting">Acting</Link>
           <Link to="/sports">Sports</Link>
-          <Link to="/travel">Travelling</Link>
+          <Link to="/travel">Travel</Link>
           <Link to="/contact">Contact</Link>
         </nav>
       </header>
@@ -216,90 +201,125 @@ export default function HomePage() {
         </div>
       ) : (
         <>
-        <section className="hero">
-          <h1>Hey there, I'm Andrew Zhang!</h1>
-          <h2>I'm <span className="typed">{typed}</span></h2>
-          <p className='intro-text'>"Ultimately there is nothing that maximizes talent more than love for the game." - Bill Belicheck, The Art of Winning</p>
-          <p className='intro-text'>I’m a Queen's computer science major that just graduated with distinction but also finished my last school year with multi-night performances for 3 different theatre shows in Drama extracurriculars. I also climb 80 foot ice walls and ride horses.</p>
-          <p className='intro-text'>I'm currently out on the West Coast, selling RTDs, hiking up mountains, surfing the sandy beaches, and jumping in rivers!</p>
-          <p className='intro-text'></p>
+        <section className="hero-main">
+          <div className="hero-content">
+            <div className="hero-text">
+              <h1 className="hero-title">I'm Andrew Zhang!</h1>
+              <h2 className="hero-subtitle">I'm <span className="typed">{typed}</span></h2>
+              <p className="hero-quote">
+                "Ultimately there is nothing that maximizes talent more than love for the game." - Bill Belichick, The Art of Winning
+              </p>
+              <div className="quote-divider"></div>
+              <p className="hero-description">
+                I'm a Queen's computer science major that just graduated and performed in 3 vastly different theatre extracurriculars. 
+                I also climb 80 foot ice walls, play a LOT of basketball, and ride horses.
+              </p>
+              <p className="hero-description">
+                I'm currently out on the West Coast, selling RTDs, hiking up mountains, surfing the sandy beaches, and jumping in rivers.
+              </p>
+              <p className="hero-description">
+                To me, life is the game, and I'm always looking to gain perspective and new ways to learn about loving life!
+              </p>
+            </div>
+            <div className="hero-images">
+              <div className="image-placeholder">
+                <img src="https://via.placeholder.com/300x400/F04F3D/FFFFFF?text=Andrew+Zhang" alt="Andrew Zhang" />
+              </div>
+              <div className="image-placeholder">
+                <img src="https://via.placeholder.com/300x400/FFD75E/000000?text=Coming+Soon" alt="Portfolio" />
+              </div>
+            </div>
+          </div>
         </section>
 
         <div className="clock">
           <strong></strong> {time}
         </div>
 
-        <section className="live-dashboard">
-            <div className="dashboard-column basketball-theme">
-              <h3>Yesterday's NBA Scores:</h3>
+        <div className="scroll-cues" aria-hidden="true">
+          <span className="chev"></span>
+          <span className="chev"></span>
+          <span className="chev"></span>
+        </div>
+
+        <section className="feature-grid">
+          <Link to="/work" className="feature-card">
+            <div className="feature-image" style={{ backgroundImage: `url(${workCard})` }} />
+            <div className="feature-caption">
+              <div className="feature-title">Career</div>
+              <div className="feature-tags"><span className="feature-tag">Work</span></div>
+            </div>
+            <div className="feature-details">
+              {/* Intentionally left empty for now */}
+            </div>
+          </Link>
+
+          <Link to="/sports" className="feature-card">
+            <div className="feature-image" style={{ backgroundImage: `url(${sportsCard})` }} />
+            <div className="feature-caption">
+              <div className="feature-title">Basketball</div>
+              <div className="feature-tags"><span className="feature-tag">Sports</span></div>
+            </div>
+            <div className="feature-details">
               {scores.length === 0 ? (
-                <p className="no-data-msg">No NBA Games :(</p>
+                <div className="feature-empty">No NBA games found.</div>
               ) : (
-                scores.slice(0, 10).map((game, i) => (
-                  <div className="column-item" key={i}>
-                    {[game.away, game.home].map((team, idx) => {
-                      if (!team) return null; // <-- prevents potential crash
-                      return (
-                        <div
-                          key={idx}
-                          className={`team-row ${game.winner === (idx === 1 ? "home" : "away") ? "winner" : "loser"}`}
-                        >
-                          <img
-                            src={`https://cdn.nba.com/logos/nba/${teamIdMap[team.id]}/global/L/logo.svg`}
-                            alt={team.short}
-                            className="team-logo"
-                            onError={(e) => (e.target.style.display = "none")}
-                          />
-                          <span className="team-name">{team.short}</span>
-                          <span className="team-score">{team.score}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ))
+                <ul className="feature-list">
+                  {scores.slice(0, 10).map((g, i) => (
+                    <li key={i}>
+                      <span className="list-primary">{g.away.short} {g.away.score}</span>
+                      <span className="list-sep"> - </span>
+                      <span className="list-secondary">{g.home.short} {g.home.score}</span>
+                    </li>
+                  ))}
+                </ul>
               )}
-          </div>
+            </div>
+          </Link>
 
-          <div className="dashboard-column broadway-theme">
-            <h3>Current Top 10 Broadway Shows</h3>
-            {shows.length === 0 ? (
-              <p className="no-data-msg">Render application needs 50 seconds to load, so please literally give it a minute!</p>
-            ) : (
-              shows.map((show, index) => (
-                <div key={index} className="column-item">
-                  <div className="team-row">
-                    <span className="prod-name">
-                      {show.rank}. {show.show}
-                    </span>
-                  </div>
-                  <div className="team-row">
-                    <span className="theater">{show.theater}</span>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
+          <Link to="/acting" className="feature-card">
+            <div className="feature-image" style={{ backgroundImage: `url(${actingCard})` }} />
+            <div className="feature-caption">
+              <div className="feature-title">Acting</div>
+              <div className="feature-tags"><span className="feature-tag">Theatre</span></div>
+            </div>
+            <div className="feature-details">
+              {shows.length === 0 ? (
+                <div className="feature-empty">Loading top shows…</div>
+              ) : (
+                <ul className="feature-list">
+                  {shows.slice(0, 10).map((s, i) => (
+                    <li key={i}>
+                      <span className="list-primary">{s.rank}.</span>
+                      <span className="list-secondary"> {s.show}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </Link>
 
-          <div className="dashboard-column weather-theme">
-            <h3>Today's Weather... in My Top 10 Travel Destinations!</h3>
-            {weather.length === 0 ? (
-              <p className="no-data-msg">Fetching weather...</p>
-            ) : (
-              weather.map((city, index) => (
-                <div key={index} className="column-item">
-                  <div className="team-row">
-                    <img
-                      src={city.icon}
-                      alt={city.desc}
-                      className="team-logo"
-                    />
-                    <span className="city-name">{index + 1}. {city.city}</span>
-                    <span className="temperature">{city.temp}°C</span>
-                  </div>
-                </div>
-              ))
-            )}
-          </div>
+          <Link to="/travel" className="feature-card">
+            <div className="feature-image" style={{ backgroundImage: `url(${travelCard})` }} />
+            <div className="feature-caption">
+              <div className="feature-title">Travel</div>
+              <div className="feature-tags"><span className="feature-tag">Destinations</span></div>
+            </div>
+            <div className="feature-details">
+              {weather.length === 0 ? (
+                <div className="feature-empty">Fetching weather…</div>
+              ) : (
+                <ul className="feature-list">
+                  {weather.slice(0, 10).map((w, i) => (
+                    <li key={i}>
+                      <span className="list-primary">{i + 1}. {w.city}</span>
+                      <span className="list-secondary"> — {w.temp}°C</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </Link>
         </section>
         </>
       )}

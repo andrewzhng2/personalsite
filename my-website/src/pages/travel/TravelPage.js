@@ -1,4 +1,4 @@
-import '../../styles/TravelPage.css';
+import './styles/TravelPage.css';
 import { useEffect, useState } from 'react';
 
 let chi1 = require("./travelimages/chi1.jpg");

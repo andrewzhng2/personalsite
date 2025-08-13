@@ -1,4 +1,4 @@
-import "../../styles/ActPage.css";
+import "./styles/ActPage.css";
 
 let headshot = require("./actimages/happyHeadshot.jpg");
 let dss1 = require("./actimages/dss1.jpg");

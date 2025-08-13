@@ -1,4 +1,4 @@
-import "../../styles/EventPage.css";
+import "./styles/EventPage.css";
 import { useEffect, useState } from "react";
 
 let tea1 = require("./eventimages/tea1.jpg");

@@ -26,12 +26,6 @@ export default function Layout() {
               Events
             </NavLink>
             <NavLink
-              to="/acting"
-              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
-            >
-              Acting
-            </NavLink>
-            <NavLink
               to="/sports"
               className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
             >

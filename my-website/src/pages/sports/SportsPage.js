@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../styles/SportsPage.css";
+import "./styles/SportsPage.css";
 
 let track1 = require("./sportsimages/track1.jpg");
 let climb1 = require("./sportsimages/climb1.jpg");
