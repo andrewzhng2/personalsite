@@ -88,7 +88,7 @@ body, html {
 
 /* ---------------- Hero Section ---------------- */
 .hero-main {
-  padding: 40px 32px;
+  padding: 80px 32px;
   max-width: none;
   margin: 0;
   width: 100%;
@@ -97,9 +97,10 @@ body, html {
 .hero-content {
   display: flex;
   align-items: flex-start;
-  gap: 100px;
+  gap: 80px;
   min-height: 60vh;
   width: 100%;
+  overflow-x: hidden; /* prevent any accidental horizontal scroll */
 }
 
 .hero-text {
@@ -169,6 +170,14 @@ body, html {
   min-width: 300px;
 }
 
+/* Nudge stack toward middle without affecting left text */
+.hero-stack-wrap {
+  margin-left: min(4vw, 40px);
+  flex: 1;
+  display: flex;
+  justify-content: center; /* center the stack within its column */
+}
+
 .image-placeholder {
   border-radius: 16px;
   overflow: hidden;
@@ -185,6 +194,65 @@ body, html {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Stacked hero image cards */
+
+/* Responsive horizontal hero cards */
+/* Stacked like New Engen: two tall cards, layered with offsets */
+.hero-stack {
+  position: relative;
+  width: clamp(420px, 44vw, 700px);
+  height: clamp(380px, 62vh, 720px);
+}
+
+.hero-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%; /* ~10% larger than before */
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+  background: transparent;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.hero-card:nth-child(1) { transform: translateX(0); }
+.hero-card:nth-child(2) { transform: translateX(18%); }
+.hero-card:nth-child(3) { transform: translateX(36%); }
+.hero-card:nth-child(4) { transform: translateX(54%); }
+
+.hero-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-card:hover { box-shadow: 0 30px 70px rgba(0,0,0,0.4); }
+
+@media (max-width: 1024px) {
+  .hero-content { gap: 40px; }
+  .hero-stack { width: min(82vw, 760px); height: clamp(360px, 56vh, 640px); }
+  .hero-card { width: 62%; }
+  .hero-card:nth-child(1) { transform: translateX(0); }
+  .hero-card:nth-child(2) { transform: translateX(16%); }
+  .hero-card:nth-child(3) { transform: translateX(32%); }
+  .hero-card:nth-child(4) { transform: translateX(48%); }
+}
+
+@media (max-width: 700px) {
+  .hero-stack { width: 92vw; height: clamp(360px, 58vh, 620px); }
+  .hero-card { width: 78%; }
+  .hero-card:nth-child(1) { transform: translateX(0); }
+  .hero-card:nth-child(2) { transform: translateX(8%); }
+  .hero-card:nth-child(3) { transform: translateX(16%); }
+  .hero-card:nth-child(4) { transform: translateX(24%); }
 }
 
 /* Responsive Design */

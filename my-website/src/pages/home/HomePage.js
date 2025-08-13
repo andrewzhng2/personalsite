@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import HeroText from './HeroText';
+import HeroStack from './HeroStack';
 import { BalldontlieAPI } from "@balldontlie/sdk";
 
 // Removed NBA/team imports used by previous dashboard implementation
@@ -44,6 +46,12 @@ export default function HomePage() {
   const [typed, setTyped] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [showIntro, setShowIntro] = useState(true);
+  const [stackOrder, setStackOrder] = useState([
+    { key: 'career', src: workCard, alt: 'Career' },
+    { key: 'sports', src: sportsCard, alt: 'Basketball' },
+    { key: 'acting', src: actingCard, alt: 'Acting' },
+    { key: 'travel', src: travelCard, alt: 'Travel' },
+  ]);
   const [scores, setScores] = useState([]);
   const [shows, setShows] = useState([]);
   const [weather, setWeather] = useState([]);
@@ -203,38 +211,21 @@ export default function HomePage() {
         <>
         <section className="hero-main">
           <div className="hero-content">
-            <div className="hero-text">
-              <h1 className="hero-title">I'm Andrew Zhang!</h1>
-              <h2 className="hero-subtitle">I'm <span className="typed">{typed}</span></h2>
-              <p className="hero-quote">
-                "Ultimately there is nothing that maximizes talent more than love for the game." - Bill Belichick, The Art of Winning
-              </p>
-              <div className="quote-divider"></div>
-              <p className="hero-description">
-                I'm a Queen's computer science major that just graduated and performed in 3 vastly different theatre extracurriculars. 
-                I also climb 80 foot ice walls, play a LOT of basketball, and ride horses.
-              </p>
-              <p className="hero-description">
-                I'm currently out on the West Coast, selling RTDs, hiking up mountains, surfing the sandy beaches, and jumping in rivers.
-              </p>
-              <p className="hero-description">
-                To me, life is the game, and I'm always looking to gain perspective and new ways to learn about loving life!
-              </p>
-            </div>
-            <div className="hero-images">
-              <div className="image-placeholder">
-                <img src="https://via.placeholder.com/300x400/F04F3D/FFFFFF?text=Andrew+Zhang" alt="Andrew Zhang" />
-              </div>
-              <div className="image-placeholder">
-                <img src="https://via.placeholder.com/300x400/FFD75E/000000?text=Coming+Soon" alt="Portfolio" />
-              </div>
-            </div>
+            <HeroText typed={typed} />
+            <HeroStack
+              stackOrder={stackOrder}
+              onBringFront={(key) =>
+                setStackOrder(prev => {
+                  const idx = prev.findIndex(p => p.key === key);
+                  const next = [...prev];
+                  const [picked] = next.splice(idx, 1);
+                  next.unshift(picked);
+                  return next;
+                })
+              }
+            />
           </div>
         </section>
-
-        <div className="clock">
-          <strong></strong> {time}
-        </div>
 
         <div className="scroll-cues" aria-hidden="true">
           <span className="chev"></span>
@@ -321,6 +312,10 @@ export default function HomePage() {
             </div>
           </Link>
         </section>
+
+        <div className="clock">
+          <strong></strong> {time}
+        </div>
         </>
       )}
     </div>
