@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.938ad7fd.css",
-    "main.js": "/static/js/main.b78b7596.js",
+    "main.js": "/static/js/main.48abf20d.js",
     "static/js/453.7476e934.chunk.js": "/static/js/453.7476e934.chunk.js",
     "static/media/mont1.jpg": "/static/media/mont1.f4ef7a616bc06ace7c16.jpg",
     "static/media/china.jpg": "/static/media/china.602bcd4af5d7fb1fed0d.jpg",
+    "static/media/ecu3.JPG": "/static/media/ecu3.2c88955c5977c93eec44.JPG",
     "static/media/miami1.jpg": "/static/media/miami1.776114195ee43bd0f7b5.jpg",
     "static/media/china1.jpg": "/static/media/china1.ee4d5c8664b338bd2ae3.jpg",
     "static/media/dss2.jpg": "/static/media/dss2.1cdba140a5ed883b03a7.jpg",
@@ -20,7 +21,6 @@
     "static/media/mich1.jpg": "/static/media/mich1.894ed6730e118ee53ce3.jpg",
     "static/media/cottage1.jpg": "/static/media/cottage1.96b5e4a50aa839e79017.jpg",
     "static/media/jc1.jpg": "/static/media/jc1.fd0a32611ac25c18e156.jpg",
-    "static/media/ecu1.jpg": "/static/media/ecu1.8b67e5c596fba3a9b2ee.jpg",
     "static/media/dinpar2.jpg": "/static/media/dinpar2.cf5376a3dffce7faef77.jpg",
     "static/media/synap.jpg": "/static/media/synap.6379522a12ae3e0a7a0d.jpg",
     "static/media/abg1.jpg": "/static/media/abg1.0b18e3d4a21b49bcab11.jpg",
@@ -69,11 +69,11 @@
     "static/media/bbq2.jpg": "/static/media/bbq2.c2ca65bf3bb4f61a8605.jpg",
     "index.html": "/index.html",
     "main.938ad7fd.css.map": "/static/css/main.938ad7fd.css.map",
-    "main.b78b7596.js.map": "/static/js/main.b78b7596.js.map",
+    "main.48abf20d.js.map": "/static/js/main.48abf20d.js.map",
     "453.7476e934.chunk.js.map": "/static/js/453.7476e934.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.938ad7fd.css",
-    "static/js/main.b78b7596.js"
+    "static/js/main.48abf20d.js"
   ]
 }
