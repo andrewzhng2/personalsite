@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc874d0a.css",
-    "main.js": "/static/js/main.e5f322ef.js",
+    "main.css": "/static/css/main.82fe1cf6.css",
+    "main.js": "/static/js/main.e8a78058.js",
     "static/js/453.7476e934.chunk.js": "/static/js/453.7476e934.chunk.js",
     "static/media/mont1.jpg": "/static/media/mont1.f4ef7a616bc06ace7c16.jpg",
     "static/media/china.jpg": "/static/media/china.602bcd4af5d7fb1fed0d.jpg",
@@ -9,7 +9,6 @@
     "static/media/china1.jpg": "/static/media/china1.ee4d5c8664b338bd2ae3.jpg",
     "static/media/jap1.jpg": "/static/media/jap1.6c91044688bb706df5b4.jpg",
     "static/media/china5.jpg": "/static/media/china5.7031de67c608f5188862.jpg",
-    "static/media/ecu2.jpg": "/static/media/ecu2.de19d23a2ea2c2fa10ea.jpg",
     "static/media/nyc1.jpg": "/static/media/nyc1.a1fbf2445f3cd9d5e13d.jpg",
     "static/media/dss1.jpg": "/static/media/dss1.c53b9fb06e5b269d403d.jpg",
     "static/media/dash1.jpg": "/static/media/dash1.4581430b1c2768c706aa.jpg",
@@ -26,13 +25,14 @@
     "static/media/cottage1.jpg": "/static/media/cottage1.96b5e4a50aa839e79017.jpg",
     "static/media/soccer1.jpg": "/static/media/soccer1.8264ca33531f6b8d2151.jpg",
     "static/media/jc1.jpg": "/static/media/jc1.fd0a32611ac25c18e156.jpg",
+    "static/media/ecu1.jpg": "/static/media/ecu1.8b67e5c596fba3a9b2ee.jpg",
     "static/media/dinpar2.jpg": "/static/media/dinpar2.cf5376a3dffce7faef77.jpg",
+    "static/media/synap.jpg": "/static/media/synap.6379522a12ae3e0a7a0d.jpg",
     "static/media/abg1.jpg": "/static/media/abg1.0b18e3d4a21b49bcab11.jpg",
     "static/media/ball2.jpg": "/static/media/ball2.314fae166d712b502fc1.jpg",
     "static/media/nyc2.jpg": "/static/media/nyc2.07ef0f4a46e076bc80f5.jpg",
     "static/media/snap1.jpg": "/static/media/snap1.4999cfa33659039d0d23.jpg",
     "static/media/queen1.jpg": "/static/media/queen1.e046528b169d812a7190.jpg",
-    "static/media/summit1.jpg": "/static/media/summit1.b80e585ec6e0d3e88f26.jpg",
     "static/media/climb1.jpg": "/static/media/climb1.63e3e557e8c9e286cbbf.jpg",
     "static/media/tea2.jpg": "/static/media/tea2.e9db09cfc87b394a5ee9.jpg",
     "static/media/multi1.jpg": "/static/media/multi1.a31bdeabc5c595c08abd.jpg",
@@ -72,12 +72,12 @@
     "static/media/AndrewZhangResume.pdf": "/static/media/AndrewZhangResume.880a111e2b54d72e0dda.pdf",
     "static/media/bbq2.jpg": "/static/media/bbq2.c2ca65bf3bb4f61a8605.jpg",
     "index.html": "/index.html",
-    "main.cc874d0a.css.map": "/static/css/main.cc874d0a.css.map",
-    "main.e5f322ef.js.map": "/static/js/main.e5f322ef.js.map",
+    "main.82fe1cf6.css.map": "/static/css/main.82fe1cf6.css.map",
+    "main.e8a78058.js.map": "/static/js/main.e8a78058.js.map",
     "453.7476e934.chunk.js.map": "/static/js/453.7476e934.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc874d0a.css",
-    "static/js/main.e5f322ef.js"
+    "static/css/main.82fe1cf6.css",
+    "static/js/main.e8a78058.js"
   ]
 }
