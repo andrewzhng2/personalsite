@@ -14,28 +14,16 @@ export default function Layout() {
           <Link to="/" className="alt-logo">AZ</Link>
           <nav className="nav-links">
             <NavLink
-              to="/work"
+              to="/workhard"
               className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
             >
-              Work
+              WORK HARD
             </NavLink>
             <NavLink
-              to="/events"
+              to="/playhard"
               className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
             >
-              Events
-            </NavLink>
-            <NavLink
-              to="/sports"
-              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
-            >
-              Sports
-            </NavLink>
-            <NavLink
-              to="/travel"
-              className={({ isActive }) => `nav-link${isActive ? " active" : ""}`}
-            >
-              Travel
+              PLAY HARD
             </NavLink>
             <NavLink
               to="/contact"

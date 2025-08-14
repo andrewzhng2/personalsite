@@ -17,6 +17,8 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path="/work" element={<WorkPage />} />
+          <Route path="/workhard" element={<WorkPage />} />
+          <Route path="/playhard" element={<WorkPage />} />
           <Route path="/events" element={<EventPage />} />
           <Route path="/acting" element={<ActPage />} />
           <Route path="/sports" element={<SportsPage />} />

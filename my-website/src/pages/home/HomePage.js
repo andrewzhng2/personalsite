@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import HeroText from './HeroText';
 import HeroStack from './HeroStack';
+import { workTimeline } from '../work/workData';
 import { BalldontlieAPI } from "@balldontlie/sdk";
 
 // Removed NBA/team imports used by previous dashboard implementation
@@ -241,7 +242,14 @@ export default function HomePage() {
               <div className="feature-tags"><span className="feature-tag">Work</span></div>
             </div>
             <div className="feature-details">
-              {/* Intentionally left empty for now */}
+              <ul className="feature-list career-list">
+                {workTimeline.map((w, i) => (
+                  <li key={i}>
+                    <span className="list-primary">{`${i + 1}. ${w.company}: `}</span>
+                    <span className="list-role">{w.role}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </Link>
 

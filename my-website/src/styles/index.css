@@ -88,7 +88,7 @@ body, html {
 
 /* ---------------- Hero Section ---------------- */
 .hero-main {
-  padding: 80px 32px;
+  padding: 80px 0 80px 32px;
   max-width: none;
   margin: 0;
   width: 100%;
@@ -104,9 +104,8 @@ body, html {
 }
 
 .hero-text {
-  flex: 2;
-  max-width: none;
-  width: 100%;
+  flex: 0 1 clamp(680px, 50vw, 820px);
+  max-width: clamp(680px, 50vw, 820px);
 }
 
 .hero-title {
@@ -172,10 +171,10 @@ body, html {
 
 /* Nudge stack toward middle without affecting left text */
 .hero-stack-wrap {
-  margin-left: min(4vw, 40px);
-  flex: 1;
+  margin-left: 0; /* keep text column unchanged */
+  flex: 0 1 clamp(520px, 46vw, 820px);
   display: flex;
-  justify-content: center; /* center the stack within its column */
+  justify-content: flex-end; /* push stack toward the right edge of its column */
 }
 
 .image-placeholder {
@@ -202,7 +201,7 @@ body, html {
 /* Stacked like New Engen: two tall cards, layered with offsets */
 .hero-stack {
   position: relative;
-  width: clamp(420px, 44vw, 700px);
+  width: 100%;
   height: clamp(380px, 62vh, 720px);
 }
 
@@ -223,9 +222,9 @@ body, html {
 }
 
 .hero-card:nth-child(1) { transform: translateX(0); }
-.hero-card:nth-child(2) { transform: translateX(18%); }
-.hero-card:nth-child(3) { transform: translateX(36%); }
-.hero-card:nth-child(4) { transform: translateX(54%); }
+.hero-card:nth-child(2) { transform: translateX(17%); }
+.hero-card:nth-child(3) { transform: translateX(34%); }
+.hero-card:nth-child(4) { transform: translateX(51%); }
 
 .hero-card img {
   width: 100%;
@@ -237,22 +236,25 @@ body, html {
 .hero-card:hover { box-shadow: 0 30px 70px rgba(0,0,0,0.4); }
 
 @media (max-width: 1024px) {
-  .hero-content { gap: 40px; }
+  .hero-content { gap: 32px; }
+  .hero-text { flex-basis: clamp(560px, 58vw, 720px); max-width: clamp(560px, 58vw, 720px); }
   .hero-stack { width: min(82vw, 760px); height: clamp(360px, 56vh, 640px); }
   .hero-card { width: 62%; }
   .hero-card:nth-child(1) { transform: translateX(0); }
-  .hero-card:nth-child(2) { transform: translateX(16%); }
-  .hero-card:nth-child(3) { transform: translateX(32%); }
-  .hero-card:nth-child(4) { transform: translateX(48%); }
+  .hero-card:nth-child(2) { transform: translateX(15%); }
+  .hero-card:nth-child(3) { transform: translateX(30%); }
+  .hero-card:nth-child(4) { transform: translateX(45%); }
 }
 
 @media (max-width: 700px) {
   .hero-stack { width: 92vw; height: clamp(360px, 58vh, 620px); }
   .hero-card { width: 78%; }
   .hero-card:nth-child(1) { transform: translateX(0); }
-  .hero-card:nth-child(2) { transform: translateX(8%); }
-  .hero-card:nth-child(3) { transform: translateX(16%); }
-  .hero-card:nth-child(4) { transform: translateX(24%); }
+  .hero-card:nth-child(2) { transform: translateX(7%); }
+  .hero-card:nth-child(3) { transform: translateX(14%); }
+  .hero-card:nth-child(4) { transform: translateX(21%); }
+  .hero-content { gap: 24px; }
+  .hero-text { flex-basis: 100%; max-width: 100%; }
 }
 
 /* Responsive Design */
@@ -577,6 +579,24 @@ body, html {
 
 .list-sep {
   opacity: 0.5;
+}
+
+/* Light grey role text for Career list */
+.list-role { color: #474747; }
+
+/* Career-only alignment with divider */
+.career-list li {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.career-list .list-primary {
+  flex: 0 0 48%;
+}
+.career-list .list-role {
+  flex: 1;
+  border-left: 2px solid rgba(0,0,0,0.12);
+  padding-left: 16px;
 }
 
 @media (max-width: 1200px) {
