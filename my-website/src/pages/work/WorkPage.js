@@ -6,9 +6,13 @@ let jc1 = require("./workimages/jc1.jpg");
 let abg1 = require("./workimages/abg1.jpg");
 let rhill1 = require("./workimages/rhill1.jpg");
 let sanso1 = require("./workimages/sanso1.jpg");
+let ecu1 = require("./workimages/ecu3.JPG");
+let synap = require("./workimages/synap.jpg");
 let kumon1 = require("./workimages/kumon1.jpg");
+let summit2 = require("./workimages/summit2.jpg");
 let dash1 = require("./workimages/dash1.jpg");
 let queen1 = require("./workimages/queen1.jpg");
+let musk1 = require("./workimages/musk2.jpg");
 
 const workItems = [
   {
@@ -24,7 +28,7 @@ const workItems = [
   {
     id: 2,
     company: "Johnson Controls",
-    role: "Automation Engingeer Intern",
+    role: "Automation Engineer Intern",
     imageName: jc1,
     description: `A 100000+ employee company that specializes in building automation and security systems.
     I got the opportunity to work on the automation development team for our security systems: everything from keypads, fire alarms, panels etc. 
@@ -42,6 +46,13 @@ const workItems = [
   },
   {
     id: 4,
+    company: "DoorDash/Instacart",
+    role: "Dasher/Shopper",
+    imageName: dash1,
+    description: "Finally got to use my simple math for something practical, calculating the value of a kilometer and time spent to see if orders were worth taking. It wasn't pretty work, but I was university broke.",
+  },
+  {
+    id: 5,
     company: "Ace Beverage Group",
     role: "Summer Sales Representative",
     imageName: abg1,
@@ -50,21 +61,11 @@ const workItems = [
     I basically ran across the country away from home for one of the greatest learning experiences of my life.`,
   },
   {
-    id: 5,
-    company: "Queen's University",
-    role: "Private Tutor and Teaching Assistant",
-    imageName: queen1,
-    description: `I got the chance to TA as early as my second year for Data Analytics, Operating Systems and Intro to Programming courses. 
-    This experience taught me the importance of sympathy, remember that you were once that student asking those questions.`,
-  },
-  {
     id: 6,
-    company: "Kumon",
-    role: "Kumon Assistant",
-    imageName: kumon1,
-    description: `I kept being selected to work with the more troublesome kids because they said I was a kid at heart and 
-    I was the only one close to an adult that they listened to. Great kids really. 
-    What I really learned is that kids just want to be heard and some attention, maybe just like the adults.`,
+    company: "Synapsis Biohackathon",
+    role: "Lead Events Coodinator",
+    imageName: synap,
+    description: `I love planning events and I needed to prove I could do it professionally for someone else. Lead a team of 5 people to plan and execute a hackathon.`,
   },
   {
     id: 7,
@@ -76,10 +77,43 @@ const workItems = [
   },
   {
     id: 8,
-    company: "DoorDash/Instacart",
-    role: "Dasher/Shopper",
-    imageName: dash1,
-    description: "Finally got to use my simple math for something practical, calculating the value of a kilometer and time spent to see if orders were worth taking. It wasn't pretty work, but I was university broke.",
+    company: "Queen's University",
+    role: "Private Tutor and Teaching Assistant",
+    imageName: queen1,
+    description: `I got the chance to TA as early as my second year for Data Analytics, Operating Systems and Intro to Programming courses. 
+    This experience taught me the importance of sympathy, remember that you were once that student asking those questions.`,
+  },
+  {
+    id: 9,
+    company: "EF Tours",
+    role: "Service Project Volunteer",
+    imageName: ecu1,
+    description: `Helped build elementary school in remote village in the Amazon Jungle.`,
+  },
+  {
+    id: 10,
+    company: "Queen's Startup Summit",
+    role: "Venture Capital Pitch Competition 2nd Place",
+    imageName: summit2,
+    description: `Invited to face the Commerce students, built my team, and won 2nd place prize in the Venture Capital Pitch Competition.`,
+  },
+  {
+    id: 11,
+    company: "Kumon",
+    role: "Kumon Assistant",
+    imageName: kumon1,
+    description: `I kept being selected to work with the more troublesome kids because they said I was a kid at heart and 
+    I was the only one close to an adult that they listened to. Great kids really. 
+    What I really learned is that kids just want to be heard and some attention, maybe just like the adults.`,
+  },
+  {
+    id: 12,
+    company: "Muskoka Woods",
+    role: "Orientation Leader",
+    imageName: musk1,
+    description: `I kept being selected to work with the more troublesome kids because they said I was a kid at heart and 
+    I was the only one close to an adult that they listened to. Great kids really. 
+    What I really learned is that kids just want to be heard and some attention, maybe just like the adults.`,
   },
 ];
 

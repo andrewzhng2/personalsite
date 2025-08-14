@@ -2,22 +2,22 @@ import "./styles/EventPage.css";
 import { useEffect, useState } from "react";
 
 let tea1 = require("./eventimages/tea1.jpg");
-let summit1 = require("./eventimages/summit1.jpg");
+let summit1 = require("./eventimages/veld1.jpg");
 let veld1 = require("./eventimages/veld1.jpg");
 let cottage1 = require("./eventimages/cottage1.jpg");
 let bbq1 = require("./eventimages/bbq1.jpg");
 let secsan1 = require("./eventimages/secsan2.jpg");
 let dinpar1 = require("./eventimages/dinpar2.jpg");
-let chef1 = require("./eventimages/chef1.jpg");
+let chef1 = require("./eventimages/chef2.jpg");
 let mich1 = require("./eventimages/mich1.jpg");
 let tea2 = require("./eventimages/tea2.jpg");
-let summit2 = require("./eventimages/summit2.jpg");
+let summit2 = require("./eventimages/veld1.jpg");
 let veld2 = require("./eventimages/veld2.jpg");
 let cottage2 = require("./eventimages/cottage2.jpg");
 let bbq2 = require("./eventimages/bbq2.jpg");
 let secsan2 = require("./eventimages/secsan1.jpg");
 let dinpar2 = require("./eventimages/dinpar1.jpg");
-let chef2 = require("./eventimages/chef3.jpg");
+let chef2 = require("./eventimages/chef2.jpg");
 let mich2 = require("./eventimages/mich2.jpg");
 
 const family = [

@@ -195,10 +195,8 @@ export default function HomePage() {
       <header className="header">
         <a href='/' className="logo">AZ</a>
         <nav className='nav-links'>
-          <Link to="/work">Work</Link>
-          <Link to="/events">Events</Link>
-          <Link to="/sports">Sports</Link>
-          <Link to="/travel">Travel</Link>
+          <Link to="/playhard">WORK HARD</Link>
+          <Link to="/playhard">PLAY HARD</Link>
           <Link to="/contact">Contact</Link>
         </nav>
       </header>
@@ -238,8 +236,8 @@ export default function HomePage() {
           <Link to="/work" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${workCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Career</div>
-              <div className="feature-tags"><span className="feature-tag">Work</span></div>
+              <div className="feature-title">Career Path:</div>
+              <div className="feature-tags"><span className="feature-tag">WORK HARD</span></div>
             </div>
             <div className="feature-details">
               <ul className="feature-list career-list">
@@ -256,12 +254,12 @@ export default function HomePage() {
           <Link to="/sports" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${sportsCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Basketball</div>
-              <div className="feature-tags"><span className="feature-tag">Sports</span></div>
+              <div className="feature-title">Athletics:</div>
+              <div className="feature-tags"><span className="feature-tag">PLAY HARD</span></div>
             </div>
             <div className="feature-details">
               {scores.length === 0 ? (
-                <div className="feature-empty">No NBA games found.</div>
+                <div className="feature-empty">No NBA games found :(</div>
               ) : (
                 <ul className="feature-list">
                   {scores.slice(0, 10).map((g, i) => (
@@ -279,14 +277,14 @@ export default function HomePage() {
           <Link to="/acting" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${actingCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Acting</div>
-              <div className="feature-tags"><span className="feature-tag">Theatre</span></div>
+              <div className="feature-title">Acting:</div>
+              <div className="feature-tags"><span className="feature-tag">PLAY HARD</span></div>
             </div>
             <div className="feature-details">
               {shows.length === 0 ? (
                 <div className="feature-empty">Loading top shows…</div>
               ) : (
-                <ul className="feature-list">
+                <ul className="feature-list acting-list">
                   {shows.slice(0, 10).map((s, i) => (
                     <li key={i}>
                       <span className="list-primary">{s.rank}.</span>
@@ -301,14 +299,14 @@ export default function HomePage() {
           <Link to="/travel" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${travelCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Travel</div>
-              <div className="feature-tags"><span className="feature-tag">Destinations</span></div>
+              <div className="feature-title">Volunteer Work:</div>
+              <div className="feature-tags"><span className="feature-tag">WORK HARD</span></div>
             </div>
             <div className="feature-details">
               {weather.length === 0 ? (
                 <div className="feature-empty">Fetching weather…</div>
               ) : (
-                <ul className="feature-list">
+                <ul className="feature-list travel-list">
                   {weather.slice(0, 10).map((w, i) => (
                     <li key={i}>
                       <span className="list-primary">{i + 1}. {w.city}</span>

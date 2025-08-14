@@ -50,14 +50,14 @@ body, html {
 
 .logo {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   color: #FFD75E;
   text-decoration: none;
 }
 
 .alt-logo {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 28px;
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -69,9 +69,9 @@ body, html {
 
 /* Nav */
 .nav-links a {
-  margin-left: 24px;
+  margin-left: 36px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 28px;
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
@@ -490,6 +490,7 @@ body, html {
   background: rgba(255, 255, 255, 0.04);
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* ensure card stretches to full grid row height */
 }
 
 .feature-card:hover {
@@ -543,12 +544,30 @@ body, html {
   background: #fff;
   color: #111;
   padding: 14px 16px;
+  flex: 1; /* take remaining space in the card so the white fills to bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex: 1; /* allow list to grow and push the container to the bottom */
+}
+
+/* Space travel cities evenly top-to-bottom to fill card */
+.travel-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Space acting shows evenly to fill its card height */
+.acting-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feature-list li {
