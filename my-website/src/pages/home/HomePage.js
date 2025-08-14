@@ -195,7 +195,7 @@ export default function HomePage() {
       <header className="header">
         <a href='/' className="logo">AZ</a>
         <nav className='nav-links'>
-          <Link to="/playhard">WORK HARD</Link>
+          <Link to="/workhard">WORK HARD</Link>
           <Link to="/playhard">PLAY HARD</Link>
           <Link to="/contact">Contact</Link>
         </nav>
@@ -233,7 +233,7 @@ export default function HomePage() {
         </div>
 
         <section className="feature-grid">
-          <Link to="/work" className="feature-card">
+          <Link to="/workhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${workCard})` }} />
             <div className="feature-caption">
               <div className="feature-title">Career Path:</div>
@@ -251,7 +251,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          <Link to="/sports" className="feature-card">
+          <Link to="/playhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${sportsCard})` }} />
             <div className="feature-caption">
               <div className="feature-title">Athletics:</div>
@@ -274,7 +274,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          <Link to="/acting" className="feature-card">
+          <Link to="/playhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${actingCard})` }} />
             <div className="feature-caption">
               <div className="feature-title">Acting:</div>
@@ -296,7 +296,7 @@ export default function HomePage() {
             </div>
           </Link>
 
-          <Link to="/travel" className="feature-card">
+          <Link to="/workhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${travelCard})` }} />
             <div className="feature-caption">
               <div className="feature-title">Volunteer Work:</div>
