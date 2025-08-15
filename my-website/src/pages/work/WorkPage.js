@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./styles/WorkPage.css";
 
-let snap1 = require("./workimages/snap1.jpg");
-let jc1 = require("./workimages/jc1.jpg");
-let abg1 = require("./workimages/abg1.jpg");
-let rhill1 = require("./workimages/rhill1.jpg");
-let sanso1 = require("./workimages/sanso1.jpg");
-let ecu1 = require("./workimages/ecu3.JPG");
-let synap = require("./workimages/synap.jpg");
-let kumon1 = require("./workimages/kumon1.jpg");
-let summit2 = require("./workimages/summit2.jpg");
-let dash1 = require("./workimages/dash1.jpg");
-let queen1 = require("./workimages/queen1.jpg");
-let musk1 = require("./workimages/musk2.jpg");
+let snap1 = require("./images/snap1.jpg");
+let jc1 = require("./images/jc1.jpg");
+let abg1 = require("./images/abg1.jpg");
+let rhill1 = require("./images/rhill1.jpg");
+let sanso1 = require("./images/sanso1.jpg");
+let ecu1 = require("./images/ecu3.JPG");
+let synap = require("./images/synap.jpg");
+let kumon1 = require("./images/kumon1.jpg");
+let summit2 = require("./images/summit2.jpg");
+let dash1 = require("./images/dash1.jpg");
+let queen1 = require("./images/queen1.jpg");
+let musk1 = require("./images/musk2.jpg");
 
 const workItems = [
   {
@@ -111,9 +111,7 @@ const workItems = [
     company: "Muskoka Woods",
     role: "Orientation Leader",
     imageName: musk1,
-    description: `I kept being selected to work with the more troublesome kids because they said I was a kid at heart and 
-    I was the only one close to an adult that they listened to. Great kids really. 
-    What I really learned is that kids just want to be heard and some attention, maybe just like the adults.`,
+    description: `Selected to lead 3-day Muskoka Woods trip for incoming first year students.`,
   },
 ];
 

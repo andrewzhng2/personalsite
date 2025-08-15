@@ -5,19 +5,12 @@ import HeroStack from './HeroStack';
 import { workTimeline } from '../work/workData';
 import { BalldontlieAPI } from "@balldontlie/sdk";
 
-// Removed NBA/team imports used by previous dashboard implementation
-
 // Card images for the four-feature grid
 // Using representative images from each section
-// Paths are relative to this file (pages/home)
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const workCard = require('../work/workimages/abg1.jpg');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const sportsCard = require('../sports/sportsimages/ball2.jpg');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const actingCard = require('../acting/actimages/mrmumray.jpg');
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const travelCard = require('../travel/travelimages/musk1.jpg');
+const workCard = require('../work/images/abg1.jpg');
+const sportsCard = require('../play/images/ball3.jpg');
+const actingCard = require('./images/dss1.jpg');
+const travelCard = require('./images/musk1.jpg');
 
 const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" });
 
@@ -236,7 +229,7 @@ export default function HomePage() {
           <Link to="/workhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${workCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Career Path:</div>
+              <div className="feature-title">My Career Path:</div>
               <div className="feature-tags"><span className="feature-tag">WORK HARD</span></div>
             </div>
             <div className="feature-details">
@@ -254,12 +247,12 @@ export default function HomePage() {
           <Link to="/playhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${sportsCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Athletics:</div>
+              <div className="feature-title">NBA Scores:</div>
               <div className="feature-tags"><span className="feature-tag">PLAY HARD</span></div>
             </div>
             <div className="feature-details">
               {scores.length === 0 ? (
-                <div className="feature-empty">No NBA games found :(</div>
+                <div className="feature-empty">No NBA games last night :(</div>
               ) : (
                 <ul className="feature-list">
                   {scores.slice(0, 10).map((g, i) => (
@@ -277,7 +270,7 @@ export default function HomePage() {
           <Link to="/playhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${actingCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Acting:</div>
+              <div className="feature-title">Top 10 Broadway:</div>
               <div className="feature-tags"><span className="feature-tag">PLAY HARD</span></div>
             </div>
             <div className="feature-details">
@@ -299,7 +292,7 @@ export default function HomePage() {
           <Link to="/workhard" className="feature-card">
             <div className="feature-image" style={{ backgroundImage: `url(${travelCard})` }} />
             <div className="feature-caption">
-              <div className="feature-title">Volunteer Work:</div>
+              <div className="feature-title">Top 10 Travel:</div>
               <div className="feature-tags"><span className="feature-tag">WORK HARD</span></div>
             </div>
             <div className="feature-details">
