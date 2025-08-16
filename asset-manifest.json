@@ -1,14 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.25bfebf5.css",
-    "main.js": "/static/js/main.121b4185.js",
+    "main.js": "/static/js/main.c49bfc0a.js",
     "static/js/453.195b869a.chunk.js": "/static/js/453.195b869a.chunk.js",
     "static/media/musk2.jpg": "/static/media/musk2.57e038b6fef4d654508e.jpg",
     "static/media/china.jpg": "/static/media/china.602bcd4af5d7fb1fed0d.jpg",
     "static/media/ecu3.JPG": "/static/media/ecu3.2c88955c5977c93eec44.JPG",
     "static/media/dss2.jpg": "/static/media/dss2.1cdba140a5ed883b03a7.jpg",
     "static/media/dss1.jpg": "/static/media/dss1.c53b9fb06e5b269d403d.jpg",
-    "static/media/dash1.jpg": "/static/media/dash1.4581430b1c2768c706aa.jpg",
     "static/media/horse1.jpg": "/static/media/horse1.9c0e19ed72b10899b84e.jpg",
     "static/media/summit2.jpg": "/static/media/summit2.12ce09a4cbac7d302ad2.jpg",
     "static/media/jc1.jpg": "/static/media/jc1.fd0a32611ac25c18e156.jpg",
@@ -32,11 +31,11 @@
     "static/media/AndrewZhangResume.pdf": "/static/media/AndrewZhangResume.880a111e2b54d72e0dda.pdf",
     "index.html": "/index.html",
     "main.25bfebf5.css.map": "/static/css/main.25bfebf5.css.map",
-    "main.121b4185.js.map": "/static/js/main.121b4185.js.map",
+    "main.c49bfc0a.js.map": "/static/js/main.c49bfc0a.js.map",
     "453.195b869a.chunk.js.map": "/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25bfebf5.css",
-    "static/js/main.121b4185.js"
+    "static/js/main.c49bfc0a.js"
   ]
 }
