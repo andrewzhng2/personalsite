@@ -21,7 +21,7 @@ const workItems = [
     imageName: snap1,
     description: `A startup competitor to Uber Eats but with a full suite of any restaurant technology you could ever need.
     I was given the opportunity to build the frontend of a QR takeout system and then sell the product into restaurants.`,
-    lessons:'Aspiration: My first taste of Sales Engineering: how to balance the asks of the customer and the asks of the development team.',
+    lessons:'Aspiration: My first taste of Sales Engineering, how to balance the asks of the customer and the asks of the development team.',
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const workItems = [
     description: `A 100000+ employee company that specializes in creating infrastructure such as security or HVAC.
     Worked on creating automation testing for hardware. At first we used the Java-based Framework Selenium, but our team saw the potential of JS-based Cypress and our team worked on the migration.
     I got the opportunity to work on our only MacBook, creating all the automation for MacOS.`,
-    lessons:'Growth:What progress, communication, and impact looks like in a company with so many layers.',
+    lessons:'Growth: What progress, communication, and impact looks like in a company with so many layers.',
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ const workItems = [
     imageName: synap,
     description: `A biotechnology biohackathon with a focus on AI the year I joined. 
     I was given the opportunity to lead a team of 5 coordinators, booking spaces, finding keynote speakers, and organizing the timetables.`,
-    lessons:'Management:How to manage my own expectations of a teammate and how to get the best out of them without asking for too much.',
+    lessons:'Management: How to manage my own expectations of a teammate and how to get the best out of them without asking for too much.',
   },
   {
     id: 7,
