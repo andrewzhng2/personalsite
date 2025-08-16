@@ -22,16 +22,16 @@ const sports = [
     desciption2: "The WHY: Food is the easiest way to the heart.", 
   },
   { name: "Sport Climbing", image: climb1, image2: climb2, 
-    description: "I can tell you that NOTHING wakes you up faster than falling 30 feet. But then you try again and just go up. I love bouldering, lead climbing, and ice climbing.",
-    desciption2: "The WHY: I am literally climbing to new heights to see more than I ever could. Also, my biggest fear is falling so it gets me used to feeling of discomfort and fear",
+    description: "NOTHING wakes you up faster than falling 30 feet.",
+    desciption2: "The WHY: Bravery is a muscle I need to train and I am afraid of heights. Plus, I am literally climbing to new heights to see more than I ever could.",
    },
   { name: "Equestrian", image: horse1, image2: horse2, 
-    description: "I'm part Mongolian, part Manchurian, and this is how I wanted to honor my heritage. Plus it was cowboy season. So I set out to find any way to learn how ride a horse. Varsity Equestrian was the answer.",
-    desciption2: "The WHY: Since you can't talk to a horse, nothing in life is even close to how much you have to trust your instinct to do equestrian. How can you guess what the horse feels and will react?",
+    description: "A sleeper debate for hardest sport: Equestrian. How do you communicate with a teammate that speaks a language no human can speak?",
+    desciption2: "The WHY: I'm part Mongolian, part Manchurian, and this is how I wanted to honor my heritage. I set out to find any way to learn how ride a horse. Varsity Equestrian was the answer.",
    },
   { name: "Acting", image: crime1, image2: dss1, 
     description: "Living truthfully under imaginary circumstances.",
-    desciption2: "The WHY: I think everyone needs a bit of artistic expression in their life.",
+    desciption2: "The WHY: I think everyone needs a bit of artistic expression in their life. This is it for me.",
   }
 ];
 
