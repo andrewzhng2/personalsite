@@ -61,11 +61,7 @@ body, html {
   color: #FFFFFF;
   text-decoration: none;
 }
-
-.logo .and {
-  font-style: italic;
-  color: #ffffff;
-}
+ 
 
 /* Nav */
 .nav-links a {
@@ -160,39 +156,12 @@ body, html {
   max-width: 650px;
 }
 
-.hero-images {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1;
-  flex-shrink: 0;
-  min-width: 300px;
-}
-
 /* Nudge stack toward middle without affecting left text */
 .hero-stack-wrap {
   margin-left: 0; /* keep text column unchanged */
   flex: 0 1 clamp(520px, 46vw, 820px);
   display: flex;
   justify-content: flex-end; /* push stack toward the right edge of its column */
-}
-
-.image-placeholder {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.image-placeholder:hover {
-  transform: translateY(-5px);
-}
-
-.image-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }
 
 /* Stacked hero image cards */
@@ -273,15 +242,6 @@ body, html {
     font-size: 32px;
   }
   
-  .hero-images {
-    flex-direction: row;
-    justify-content: center;
-  }
-  
-  .image-placeholder img {
-    width: 250px;
-    height: 300px;
-  }
 }
 
 .typed::after {
@@ -337,142 +297,6 @@ body, html {
 }
 
 /* ---------------- Live Sections Text ---------------- */
-.live-dashboard {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 40px;
-}
-
-.dashboard-column {
-  background-color: #ffeaa7;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center content horizontally */
-  max-height: 100%;
-}
-
-.dashboard-column h3 {
-  margin-bottom: 16px;
-  text-align: center;
-  width: 100%;
-  color: #333;
-  font-size: 30px;
-}
-
-.dashboard-column .column-item {
-  background-color: #fffde7;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 300px;
-  padding: 16px;
-  margin-top: 20px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: left;
-}
-
-.basketball-theme {
-  box-shadow: inset 0 0 0 5px #ffffff,
-  inset 0 0 0 10px #ff8000,
-  inset 0 0 0 15px #ffffff;
-}
-
-.broadway-theme {
-  box-shadow: inset 0 0 0 5px #590601,
-  inset 0 0 0 10px #590601,
-  inset 0 0 0 15px #000000;
-}
-
-.weather-theme {
-  box-shadow: inset 0 0 0 5px #ffc0b1,
-  inset 0 0 0 10px #FFA931,
-  inset 0 0 0 15px #ff7472c6;
-}
-
-.team-row {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.team-logo {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-
-.team-name {
-  flex: 1;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #333;
-  font-size: 22px;
-}
-
-.team-score {
-  font-weight: 700;
-  font-size: 22px;
-  margin-right: 10px;
-}
-
-.winner .team-name,
-.winner .team-score {
-  font-weight: 900;
-  color: #111;
-}
-
-.loser {
-  color: #111;
-  opacity: 0.4;
-}
-
-.placeholder {
-  opacity: 0.6;
-}
-
-.no-data-msg {
-  color:#333;
-  margin: 20px;
-  align-items: center; 
-  opacity: 0.8;
-}
-
-.prod-name {
-  flex: 1;
-  font-weight: 600;
-  color: #333;
-  font-size: 22px;
-}
-
-.theater {
-  font-weight: 100;
-  font-size: 18px;
-  margin-right: 10px;
-  color: #959595;
-}
-
-.city-name {
-  flex: 1;
-  font-weight: 600;
-  color: #333;
-  font-size: 22px;
-}
-
-.temperature {
-  margin-right: 10px;
-  font-size: 22px;
-  color: #000000;
-}
-
 /* ---------------- Feature Grid (replaces live dashboard) ---------------- */
 .feature-grid {
   display: grid;
