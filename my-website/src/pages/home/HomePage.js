@@ -16,6 +16,7 @@ const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" 
 
 const titles = [
   "a jack of all trades.",
+  "a full-stack developer.",
   "a sales engineer.",
   "a CS graduate.",
   "a chef.",
@@ -313,7 +314,7 @@ export default function HomePage() {
         </section>
 
         <div className="clock">
-          <strong></strong> {time}
+          {time}
         </div>
         </>
       )}

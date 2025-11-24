@@ -12,6 +12,8 @@ let kumon1 = require("./images/kumon1.jpg");
 let summit2 = require("./images/summit2.jpg");
 let queen1 = require("./images/queen1.jpg");
 let musk1 = require("./images/musk2.jpg");
+let retainly1 = require("./images/retainly1.jpg");
+let trvl1 = require("./images/trvl1.jpg");
 
 const workItems = [
   {
@@ -104,6 +106,22 @@ const workItems = [
     company: "Muskoka Woods",
     role: "Orientation Leader",
     imageName: musk1,
+    description: `Selected to lead a group of 10 first year studenst for overnight 3-day Muskoka Woods trip filled with sports and arts.`,
+    lessons:'Responsibility: How team culture can inspire the unexpected in the best way possible.',
+  },
+  {
+    id: 12,
+    company: "Retainly",
+    role: "Founding Full-Stack Engineer and Product Owner",
+    imageName: retainly1,
+    description: `Selected to lead a group of 10 first year studenst for overnight 3-day Muskoka Woods trip filled with sports and arts.`,
+    lessons:'Responsibility: How team culture can inspire the unexpected in the best way possible.',
+  },
+  {
+    id: 13,
+    company: "Personal Project",
+    role: "TRVL",
+    imageName: trvl1,
     description: `Selected to lead a group of 10 first year studenst for overnight 3-day Muskoka Woods trip filled with sports and arts.`,
     lessons:'Responsibility: How team culture can inspire the unexpected in the best way possible.',
   },

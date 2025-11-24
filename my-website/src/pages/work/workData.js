@@ -1,4 +1,5 @@
 export const workTimeline = [
+  { company: "Retainly", role: "Product Owner & Founding Engineer" },
   { company: "Ace Beverage Group", role: "Sales Representative" },
   { company: "Johnson Controls", role: "Automation Engineer Intern" },
   { company: "Snappy Innovations", role: "Software Developer & Business Analyst Intern" },
