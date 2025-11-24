@@ -115,8 +115,8 @@ const workItems = [
   },
   {
     id: 12,
-    company: "Personal Project",
-    role: "TRVL",
+    company: "TRVL",
+    role: "Personal Project",
     imageName: trvl1,
     description: `A travel planning website that I can use to plan trips the way they should be planned, adaptable and collaborative!`,
     lessons:'Hosting/Google Maps API: Needed a lot of patience and double-checking to make sure it worked.',
