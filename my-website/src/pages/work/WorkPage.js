@@ -27,6 +27,18 @@ const workItems = [
   },
   {
     id: 2,
+    company: "Retainly",
+    role: "Founding Full-Stack Engineer and Product Owner",
+    imageName: retainly1,
+    description: (
+      <>
+        For <a href="https://app.joinretainly.com/" target="_blank" rel="noopener noreferrer">Retainly</a>, I am building the frontend and backend of a software platform for realtors to manage their vendor lists and clients. Developing using Next, FastAPI, and PostgreSQL. Always building new features and fixing bugs. Learning all kinds of new technologies and tools: Resend, OpenAI API, Cloudflare, Redis, Google OAuth, Stripe.
+      </>
+    ),
+    lessons:'Ownership: Leading a team by doing and taking responsibility.',
+  },
+  {
+    id: 3,
     company: "Johnson Controls",
     role: "Automation Engineer Intern",
     imageName: jc1,
@@ -34,14 +46,6 @@ const workItems = [
     Worked on creating automation testing for hardware. At first we used the Java-based Framework Selenium, but our team saw the potential of JS-based Cypress and our team worked on the migration.
     I got the opportunity to work on our only MacBook, creating all the automation for MacOS.`,
     lessons:'Growth: What progress, communication, and impact looks like in a company with so many layers.',
-  },
-  {
-    id: 3,
-    company: "City of Richmond Hill",
-    role: "QA and Project Management Intern",
-    imageName: rhill1,
-    description: `A local government IT department for websites and local projects. I got the opportunity to write technical requirements and QA tests for basic government websites.`,
-    lessons:'Accumulative advantage: how skills compound over time.',
   },
   {
     id: 4,
@@ -111,19 +115,19 @@ const workItems = [
   },
   {
     id: 12,
-    company: "Retainly",
-    role: "Founding Full-Stack Engineer and Product Owner",
-    imageName: retainly1,
-    description: `Selected to lead a group of 10 first year studenst for overnight 3-day Muskoka Woods trip filled with sports and arts.`,
-    lessons:'Responsibility: How team culture can inspire the unexpected in the best way possible.',
-  },
-  {
-    id: 13,
     company: "Personal Project",
     role: "TRVL",
     imageName: trvl1,
-    description: `Selected to lead a group of 10 first year studenst for overnight 3-day Muskoka Woods trip filled with sports and arts.`,
-    lessons:'Responsibility: How team culture can inspire the unexpected in the best way possible.',
+    description: `A travel planning website that I can use to plan trips the way they should be planned, adaptable and collaborative!`,
+    lessons:'Hosting/Google Maps API: Needed a lot of patience and double-checking to make sure it worked.',
+  },
+  {
+    id: 13,
+    company: "City of Richmond Hill",
+    role: "QA and Project Management Intern",
+    imageName: rhill1,
+    description: `A local government IT department for websites and local projects. I got the opportunity to write technical requirements and QA tests for basic government websites.`,
+    lessons:'Accumulative advantage: how skills compound over time.',
   },
 ];
 
