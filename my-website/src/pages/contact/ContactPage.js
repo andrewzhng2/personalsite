@@ -32,8 +32,9 @@ export default function ContactPage() {
         </div>
 
         <div className="contact-socials">
-          <a href="https://instagram.com/andrew.zhng" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.linkedin.com/in/andrew-zhang2/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/andrewzhng2" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://instagram.com/andrew.zhng" target="_blank" rel="noreferrer">Instagram</a>
           <a href="https://www.youtube.com/@andrewzhng" target="_blank" rel="noreferrer">YouTube</a>
         </div>
       </div>
