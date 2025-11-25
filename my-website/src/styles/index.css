@@ -191,9 +191,9 @@ body, html {
 }
 
 .hero-card:nth-child(1) { transform: translateX(0); }
-.hero-card:nth-child(2) { transform: translateX(14%); }
-.hero-card:nth-child(3) { transform: translateX(28%); }
-.hero-card:nth-child(4) { transform: translateX(42%); }
+.hero-card:nth-child(2) { transform: translateX(24%); }
+.hero-card:nth-child(3) { transform: translateX(48%); }
+.hero-card:nth-child(4) { transform: translateX(72%); }
 
 .hero-card img {
   width: 100%;
