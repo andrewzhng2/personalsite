@@ -93,7 +93,7 @@ body, html {
 .hero-content {
   display: flex;
   align-items: flex-start;
-  gap: 80px;
+  gap: 120px;
   min-height: 60vh;
   width: 100%;
   overflow-x: hidden; /* prevent any accidental horizontal scroll */
@@ -178,7 +178,7 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 65%; /* ~10% larger than before */
+  width: 58%; /* ~10% larger than before */
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -191,9 +191,9 @@ body, html {
 }
 
 .hero-card:nth-child(1) { transform: translateX(0); }
-.hero-card:nth-child(2) { transform: translateX(17%); }
-.hero-card:nth-child(3) { transform: translateX(34%); }
-.hero-card:nth-child(4) { transform: translateX(51%); }
+.hero-card:nth-child(2) { transform: translateX(14%); }
+.hero-card:nth-child(3) { transform: translateX(28%); }
+.hero-card:nth-child(4) { transform: translateX(42%); }
 
 .hero-card img {
   width: 100%;
