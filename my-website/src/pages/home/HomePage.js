@@ -10,7 +10,7 @@ import { BalldontlieAPI } from "@balldontlie/sdk";
 const workCard = require('../work/images/synap.jpg');
 const sportsCard = require('../play/images/ball3.jpg');
 const actingCard = require('./images/dss1.jpg');
-const travelCard = require('./images/climb1.jpg');
+const travelCard = require('./images/sky.JPG');
 
 const api = new BalldontlieAPI({ apiKey: "1a795e0e-94d9-4370-8572-ca4a306ffef5" });
 
