@@ -9,16 +9,16 @@ export default function HeroText({ typed }) {
       <div className="quote-divider"></div>
       <p className="hero-description">
         I'm a Queen's computer science major that just graduated. 
-        I climb 80 foot ice walls, play a LOT of basketball, do some theatre, and ride horses. I'm currently training for a half-marathon in May and a half Ironman after that.
+        I climb, I cook, I do theatre, and I code. I'm currently training for a half-marathon in May and a half Ironman after that.
       </p>
       <p className="hero-description">
-        I'm currently working in Toronto as a software engineer and product owner at <a href="https://app.joinretainly.com/" target="_blank" rel="noopener noreferrer">Retainly</a>, a software platform for realtors to manage their vendor lists and clients.
+        I'm currently working in Toronto as a software engineer and product owner at <a href="https://app.joinretainly.com/" target="_blank" rel="noopener noreferrer">Retainly</a>, a software platform for realtors.
       </p>
       <p className="hero-description">
-        I've also been doing the LeetCode grind and working on personal projects, most recently being TRVL, a travel planning website the way I like to plan trips. 
+        I've also been doing the LeetCode grind and working on personal projects, most recently being TRVL. 
       </p>
       <p className="hero-description">
-        To me, life is the game, and I'm always looking to gain perspective and new ways to learn about loving life!
+        "The game" to me is life. I'm always looking to gain perspective and learning new ways to love life!
       </p>
     </div>
   );
