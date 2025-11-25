@@ -93,7 +93,7 @@ body, html {
 .hero-content {
   display: flex;
   align-items: flex-start;
-  gap: 120px;
+  gap: 160px;
   min-height: 60vh;
   width: 100%;
   overflow-x: hidden; /* prevent any accidental horizontal scroll */
@@ -178,7 +178,7 @@ body, html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 58%; /* ~10% larger than before */
+  width: 58%; 
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
@@ -193,7 +193,8 @@ body, html {
 .hero-card:nth-child(1) { transform: translateX(0); }
 .hero-card:nth-child(2) { transform: translateX(24%); }
 .hero-card:nth-child(3) { transform: translateX(48%); }
-.hero-card:nth-child(4) { transform: translateX(72%); }
+/* Anchor the last card to the right edge to avoid rounding overflow */
+.hero-card:nth-child(4) { left: auto; right: 0; transform: none; }
 
 .hero-card img {
   width: 100%;
