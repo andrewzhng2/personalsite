@@ -8,8 +8,8 @@ export default function HeroText({ typed }) {
       </p>
       <div className="quote-divider"></div>
       <p className="hero-description">
-        I'm a Queen's computer science major that just graduated. 
-        I climb, I cook, I do theatre, and I code. I'm currently training for a half-marathon in May and a half Ironman after that.
+        I'm a Queen's computer science major that love being the student as much as the teacher. 
+        I lead by doing it first, taking responsiblity, and having open and honest communication. I'm currently training for a half-marathon in May and a half Ironman after that.
       </p>
       <p className="hero-description">
         I'm currently working in Toronto as a software engineer and product owner at <a href="https://app.joinretainly.com/" target="_blank" rel="noopener noreferrer">Retainly</a>, a software platform for realtors.
