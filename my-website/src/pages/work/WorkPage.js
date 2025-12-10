@@ -58,12 +58,11 @@ const workItems = [
   },
   {
     id: 5,
-    company: "Ace Beverage Group",
-    role: "Summer Sales Representative",
-    imageName: abg1,
-    description: `An extremely driven startup mentality but just got acquired Ready-To-Drink alcohol company with the slogan: LFG. 
-    Booked 10-12 meetings in person with managers, sold in innovations, upsold main products, and built strong relationships with clients.`,
-    lessons:'Relationships: The power of relationships and company culture. Every interaction matters.',
+    company: "Queen's University",
+    role: "Private Tutor and Teaching Assistant",
+    imageName: queen1,
+    description: `Tutored and marked assignments for Data Analytics, Intro to Programming, and Operating Systems courses.`,
+    lessons:'Sympathy: Remember that you were once that student asking those questions.',
   },
   {
     id: 6,
@@ -84,11 +83,11 @@ const workItems = [
   },
   {
     id: 8,
-    company: "Queen's University",
-    role: "Private Tutor and Teaching Assistant",
-    imageName: queen1,
-    description: `Tutored and marked assignments for Data Analytics, Intro to Programming, and Operating Systems courses.`,
-    lessons:'Sympathy: Remember that you were once that student asking those questions.',
+    company: "Queen's Startup Summit",
+    role: "Venture Capital Pitch Competition 2nd Place",
+    imageName: summit2,
+    description: `Invited to face the Commerce students, built my team, and won 2nd place prize in the Venture Capital Pitch Competition.`,
+    lessons:'Grind: Put in the work and you will be rewarded. Someone else is putting in that work too.',
   },
   {
     id: 9,
@@ -100,11 +99,12 @@ const workItems = [
   },
   {
     id: 10,
-    company: "Queen's Startup Summit",
-    role: "Venture Capital Pitch Competition 2nd Place",
-    imageName: summit2,
-    description: `Invited to face the Commerce students, built my team, and won 2nd place prize in the Venture Capital Pitch Competition.`,
-    lessons:'Grind: Put in the work and you will be rewarded. Someone else is putting in that work too.',
+    company: "Ace Beverage Group",
+    role: "Summer Sales Representative",
+    imageName: abg1,
+    description: `An extremely driven startup mentality but just got acquired Ready-To-Drink alcohol company with the slogan: LFG. 
+    Booked 10-12 meetings in person with managers, sold in innovations, upsold main products, and built strong relationships with clients.`,
+    lessons:'Relationships: The power of relationships and company culture. Every interaction matters.',
   },
   {
     id: 11,
