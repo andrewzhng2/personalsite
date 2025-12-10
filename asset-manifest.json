@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.43817254.css",
-    "main.js": "/static/js/main.714756a1.js",
+    "main.js": "/static/js/main.0bcf2493.js",
     "static/js/453.195b869a.chunk.js": "/static/js/453.195b869a.chunk.js",
     "static/media/musk2.jpg": "/static/media/musk2.57e038b6fef4d654508e.jpg",
     "static/media/china.jpg": "/static/media/china.602bcd4af5d7fb1fed0d.jpg",
@@ -34,11 +34,11 @@
     "static/media/hybrid2.jpg": "/static/media/hybrid2.11e8eddfd78feb2c76aa.jpg",
     "index.html": "/index.html",
     "main.43817254.css.map": "/static/css/main.43817254.css.map",
-    "main.714756a1.js.map": "/static/js/main.714756a1.js.map",
+    "main.0bcf2493.js.map": "/static/js/main.0bcf2493.js.map",
     "453.195b869a.chunk.js.map": "/static/js/453.195b869a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.43817254.css",
-    "static/js/main.714756a1.js"
+    "static/js/main.0bcf2493.js"
   ]
 }
