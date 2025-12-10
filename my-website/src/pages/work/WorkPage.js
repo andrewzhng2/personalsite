@@ -14,6 +14,7 @@ let queen1 = require("./images/queen1.jpg");
 let musk1 = require("./images/musk2.jpg");
 let retainly1 = require("./images/retainly1.jpg");
 let trvl1 = require("./images/trvl1.jpg");
+let hybrid2 = require("./images/hybrid2.jpg");
 
 const workItems = [
   {
@@ -128,6 +129,14 @@ const workItems = [
     imageName: rhill1,
     description: `A local government IT department for websites and local projects. I got the opportunity to write technical requirements and QA tests for basic government websites.`,
     lessons:'Accumulative advantage: how skills compound over time.',
+  },
+  {
+    id: 14,
+    company: "Hybrid",
+    role: "Personal Project",
+    imageName: hybrid2,
+    description: `A website for tracking different activity sessions and optimizing the body by being a hybrid athlete. (Also wanted to figure out the buzz for Snowflake.)`,
+    lessons:'Snowflake Analytics, Query Generation, and Data Modeling.',
   },
 ];
 
